@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
 
         // Set Bools for Animator
         animator.SetBool("walking", walking);
-        //animator.SetBool("running", running);
+        animator.SetBool("running", running);
         animator.SetBool("interact", interact);
     }
 
