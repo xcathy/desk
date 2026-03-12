@@ -6,14 +6,16 @@ public class Player : MonoBehaviour
     // public variables
     public float sensitivity = 1.0f;
     public float speed = 1.0f;
+    public float runSpeed = 2.0f;
     public Transform cameraTransform;
 
     // private variables
     private Mouse mouse;
     private float pitch = 0f;
     private Keyboard keyboard;
-    private Vector3 keyboardMovement;
+    private Vector3 velocity;
     private Rigidbody rb;
+    private Animator animator;
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
 
         // get the rgidbody of the player object
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class Player : MonoBehaviour
         {
             float x = 0f;
             float z = 0f;
+            float run = 1.0f;
 
             if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) z += 1f;
 
@@ -59,6 +63,8 @@ public class Player : MonoBehaviour
 
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) x -= 1f;
 
+            if (keyboard.leftShiftKey.isPressed) run = runSpeed;
+
             // get the camra forward and right
             Vector3 camForward = cameraTransform.forward;
             Vector3 camRight = cameraTransform.right;
@@ -67,12 +73,11 @@ public class Player : MonoBehaviour
             camRight.y = 0f;
 
             // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
-            keyboardMovement = (camRight.normalized * x + camForward.normalized * z) * speed;
-            Debug.Log("keyboard moved: " + keyboardMovement);
+            velocity = (camRight.normalized * x + camForward.normalized * z) * speed * run;
+            Debug.Log("velocity: " + velocity);
         }
 
         // get interaction inputs from mouse clicks
-
         if (mouse != null && mouse.leftButton.wasPressedThisFrame)
         {
             Debug.Log("left mouse button clicked...");
@@ -86,7 +91,6 @@ public class Player : MonoBehaviour
     // move the rigidbody
     void FixedUpdate()
     {
-        Vector3 moveAmount = keyboardMovement * speed;
-        rb.linearVelocity = new Vector3(moveAmount.x * speed, rb.linearVelocity.y, moveAmount.z * speed);
+        rb.linearVelocity = velocity;
     }
 }    

@@ -2647,27 +2647,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.71716
+      value: 0.83757114
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.71716
+      value: 0.83757114
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.71716
+      value: 0.83757114
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9426303
+      value: -3.9643
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.67
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.55
+      value: 1.4765
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2717,6 +2717,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1717879094}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717879095}
   m_SourcePrefab: {fileID: 100100000, guid: 52301f31770eb50419ebd26dc32f5957, type: 3}
 --- !u!4 &1717879090 stripped
 Transform:
@@ -2791,8 +2794,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   sensitivity: 0.5
-  speed: 2.4
+  speed: 14
+  runSpeed: 1.5
   cameraTransform: {fileID: 330585546}
+--- !u!95 &1717879095
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717879091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f3cf740993dcb64fad7193ba0167d26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1736150566
 PrefabInstance:
   m_ObjectHideFlags: 0
