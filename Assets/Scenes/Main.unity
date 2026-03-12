@@ -2790,8 +2790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2157ec971d32f8049951ccd7c992dd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  sensitivity: 1
-  speed: 3
+  sensitivity: 0.5
+  speed: 2.4
   cameraTransform: {fileID: 330585546}
 --- !u!1001 &1736150566
 PrefabInstance:

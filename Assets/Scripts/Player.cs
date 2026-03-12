@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // get mouse inputs
+        // get camera rotation inputs from mousepos
         mouse = Mouse.current;
         float mouseX = mouse.delta.x.ReadValue() * sensitivity;
         float mouseY = mouse.delta.y.ReadValue() * sensitivity;
@@ -43,15 +43,6 @@ public class Player : MonoBehaviour
 
         cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
-        if (mouse != null && mouse.leftButton.wasPressedThisFrame)
-        {
-            Debug.Log("left mouse button clicked...");
-        }
-        if (mouse != null && mouse.rightButton.wasPressedThisFrame)
-        {
-            Debug.Log("right mouse button clicked...");
-        }
-
         // get keyboard inputs
         keyboard = Keyboard.current;
 
@@ -60,20 +51,35 @@ public class Player : MonoBehaviour
             float x = 0f;
             float z = 0f;
 
-            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed)
-                z += 1f;
+            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) z += 1f;
 
-            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed)
-                z -= 1f;
+            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) z -= 1f;
 
-            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
-                x += 1f;
+            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) x += 1f;
 
-            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
-                x -= 1f;
+            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) x -= 1f;
 
-            keyboardMovement = new Vector3(x, 0f, z).normalized;
+            // get the camra forward and right
+            Vector3 camForward = cameraTransform.forward;
+            Vector3 camRight = cameraTransform.right;
+
+            camForward.y = 0f;
+            camRight.y = 0f;
+
+            // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
+            keyboardMovement = (camRight.normalized * x + camForward.normalized * z) * speed;
             Debug.Log("keyboard moved: " + keyboardMovement);
+        }
+
+        // get interaction inputs from mouse clicks
+
+        if (mouse != null && mouse.leftButton.wasPressedThisFrame)
+        {
+            Debug.Log("left mouse button clicked...");
+        }
+        if (mouse != null && mouse.rightButton.wasPressedThisFrame)
+        {
+            Debug.Log("right mouse button clicked...");
         }
     }
 
