@@ -10,12 +10,17 @@ public class Player : MonoBehaviour
     public Transform cameraTransform;
 
     // private variables
+    private Rigidbody rb;
+    private Animator animator;
     private Mouse mouse;
     private float pitch = 0f;
     private Keyboard keyboard;
     private Vector3 velocity;
-    private Rigidbody rb;
-    private Animator animator;
+
+    // animation bools
+    private bool walking = false;
+    private bool running = false;
+    private bool interact = false;
 
     void Start()
     {
@@ -62,7 +67,7 @@ public class Player : MonoBehaviour
             if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) x += 1f;
 
             if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) x -= 1f;
-
+            // set speed to running speed if left shift is pressed
             if (keyboard.leftShiftKey.isPressed) run = runSpeed;
 
             // get the camra forward and right
@@ -75,17 +80,29 @@ public class Player : MonoBehaviour
             // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
             velocity = (camRight.normalized * x + camForward.normalized * z) * speed * run;
             Debug.Log("velocity: " + velocity);
+
+            // see if the walking or running animation should play
+            walking  = new Vector2(velocity.x, velocity.z).sqrMagnitude > 0.01f;
+            running = run > 1.0f;
         }
 
         // get interaction inputs from mouse clicks
         if (mouse != null && mouse.leftButton.wasPressedThisFrame)
         {
+            interact = true;
             Debug.Log("left mouse button clicked...");
+        } else
+        {
+            interact = false;
         }
         if (mouse != null && mouse.rightButton.wasPressedThisFrame)
         {
             Debug.Log("right mouse button clicked...");
         }
+
+        animator.SetBool("walking", walking);
+        //animator.SetBool("running", running);
+        animator.SetBool("interact", interact);
     }
 
     // move the rigidbody
