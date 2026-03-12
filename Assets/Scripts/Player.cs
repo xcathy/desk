@@ -36,24 +36,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // get camera rotation inputs from mousepos
+        // Mouse Inputs
         mouse = Mouse.current;
-        float mouseX = mouse.delta.x.ReadValue() * sensitivity;
-        float mouseY = mouse.delta.y.ReadValue() * sensitivity;
-        Debug.Log("mouse x: " + mouseX + " mouse y: " + mouseY);
+        if (mouse != null)
+        {
+            // get camera rotation inputs from mousepos
+            float mouseX = mouse.delta.x.ReadValue() * sensitivity;
+            float mouseY = mouse.delta.y.ReadValue() * sensitivity;
 
-        // rotate player horizontally
-        transform.Rotate(0f, mouseX, 0f);
+            // rotate player horizontally
+            transform.Rotate(0f, mouseX, 0f);
 
-        // rotate camera vertically
-        pitch -= mouseY;
-        pitch = Mathf.Clamp(pitch, -80f, 80f);
+            // rotate camera vertically
+            pitch -= mouseY;
+            pitch = Mathf.Clamp(pitch, -80f, 80f);
 
-        cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+            cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
-        // get keyboard inputs
+            // get interaction inputs from mouse clicks
+            interact = false;
+            if (mouse.leftButton.wasPressedThisFrame) interact = true;
+            if (mouse.rightButton.wasPressedThisFrame) Debug.Log("right mouse button clicked...");
+        }
+
+        // Keyboard Inputs
         keyboard = Keyboard.current;
-
         if (keyboard != null)
         {
             float x = 0f;
@@ -86,20 +93,7 @@ public class Player : MonoBehaviour
             running = run > 1.0f;
         }
 
-        // get interaction inputs from mouse clicks
-        if (mouse != null && mouse.leftButton.wasPressedThisFrame)
-        {
-            interact = true;
-            Debug.Log("left mouse button clicked...");
-        } else
-        {
-            interact = false;
-        }
-        if (mouse != null && mouse.rightButton.wasPressedThisFrame)
-        {
-            Debug.Log("right mouse button clicked...");
-        }
-
+        // Set Bools for Animator
         animator.SetBool("walking", walking);
         //animator.SetBool("running", running);
         animator.SetBool("interact", interact);
