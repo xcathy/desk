@@ -54,8 +54,8 @@ public class Player : MonoBehaviour
             cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
             // get interaction inputs from mouse clicks
-            interact = false;
-            if (mouse.leftButton.wasPressedThisFrame) interact = true;
+            // holding mouse = 1, released = 0
+            interact = mouse.leftButton.isPressed;
             if (mouse.rightButton.wasPressedThisFrame) Debug.Log("right mouse button clicked...");
         }
 
@@ -86,7 +86,6 @@ public class Player : MonoBehaviour
 
             // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
             velocity = (camRight.normalized * x + camForward.normalized * z) * speed * run;
-            Debug.Log("velocity: " + velocity);
 
             // see if the walking or running animation should play
             walking  = new Vector2(velocity.x, velocity.z).sqrMagnitude > 0.01f;
