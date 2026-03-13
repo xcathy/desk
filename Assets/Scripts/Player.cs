@@ -54,7 +54,6 @@ public class Player : MonoBehaviour
             cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
             // get interaction inputs from mouse clicks
-            // holding mouse = 1, released = 0
             interact = mouse.leftButton.isPressed;
             if (mouse.rightButton.wasPressedThisFrame) Debug.Log("right mouse button clicked...");
         }
