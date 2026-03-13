@@ -10,10 +10,15 @@ public class UI : MonoBehaviour
     private Mouse mouse;
     // Reference vars
     private VisualElement root;
+    // menu
     private VisualElement menu;
     private Button startoverBtn;
     private Button resumeBtn;
     private Button exitBtn;
+    // dialogue
+    private VisualElement dialogue;
+    // items
+    private VisualElement items;
 
     // Bools
     private bool startover;
@@ -33,9 +38,16 @@ public class UI : MonoBehaviour
         startoverBtn = menu.Q<Button>("STARTOVER");
         resumeBtn = menu.Q<Button>("RESUME");
         exitBtn = menu.Q<Button>("EXIT");
+        // dialogue box
+        dialogue = root.Q<VisualElement>("dialogue");
+        // item box
+        items = root.Q<VisualElement>("items");
 
-        // default hide the menu
+        // default hide the menu and dialogue box
         menu.style.display = DisplayStyle.None;
+        dialogue.style.display = DisplayStyle.None;
+        // default partially hide the items
+        items.style.top = Length.Percent(-15);
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();

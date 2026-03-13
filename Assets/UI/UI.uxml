@@ -1,10 +1,19 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/UI.uss?fileID=7433441132597879392&amp;guid=6dbd89e1e12fcc444a756fa9b2a5ff9c&amp;type=3"/>
+    <ui:VisualElement name="items" style="flex-grow: 1;">
+        <ui:VisualElement name="slotA" class="slot" style="flex-grow: 1;"/>
+        <ui:VisualElement name="slotB" class="slot" style="flex-grow: 1;"/>
+        <ui:VisualElement name="slotC" class="slot" style="flex-grow: 1;"/>
+        <ui:VisualElement name="slotD" class="slot" style="flex-grow: 1;"/>
+        <ui:VisualElement name="slotE" class="slot" style="flex-grow: 1;"/>
+    </ui:VisualElement>
     <ui:VisualElement name="menu" style="flex-grow: 1; width: 30%;">
         <ui:Button text="STARTOVER" name="STARTOVER" style="position: relative;"/>
         <ui:Button text="RESUME" name="RESUME" style="position: relative;"/>
         <ui:Button text="EXIT" name="EXIT" style="position: relative;"/>
     </ui:VisualElement>
-    <ui:VisualElement name="dialogue" style="flex-grow: 1;"/>
-    <ui:Image name="icon"/>
+    <ui:VisualElement name="dialogue" style="flex-grow: 1; flex-direction: row;">
+        <ui:Image name="icon"/>
+        <ui:VisualElement name="box" style="flex-grow: 1;"/>
+    </ui:VisualElement>
 </ui:UXML>
