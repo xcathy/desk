@@ -4942,7 +4942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2157ec971d32f8049951ccd7c992dd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  sensitivity: 0.5
+  sensitivity: 7
   speed: 14
   runSpeed: 1.5
   cameraTransform: {fileID: 330585546}

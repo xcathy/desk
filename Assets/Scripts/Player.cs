@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     // private variables
     private Rigidbody rb;
     private Animator animator;
-    private Mouse mouse;
     private float pitch = 0f;
     private Keyboard keyboard;
     private Vector3 velocity;
@@ -36,27 +35,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Mouse Inputs
-        mouse = Mouse.current;
-        if (mouse != null)
-        {
-            // get camera rotation inputs from mousepos
-            float mouseX = mouse.delta.x.ReadValue() * sensitivity;
-            float mouseY = mouse.delta.y.ReadValue() * sensitivity;
+        // get camera rotation inputs from mousepos
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-            // rotate player horizontally
-            transform.Rotate(0f, mouseX, 0f);
+        // rotate player horizontally
+        transform.Rotate(0f, mouseX, 0f);
 
-            // rotate camera vertically
-            pitch -= mouseY;
-            pitch = Mathf.Clamp(pitch, -80f, 80f);
+        // rotate camera vertically
+        pitch -= mouseY;
+        pitch = Mathf.Clamp(pitch, -80f, 80f);
 
-            cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
 
-            // get interaction inputs from mouse clicks
-            interact = mouse.leftButton.isPressed;
-            if (mouse.rightButton.wasPressedThisFrame) Debug.Log("right mouse button clicked...");
-        }
+        // get interaction inputs from mouse clicks
+        interact = Input.GetMouseButton(0);
+        if (Input.GetMouseButton(1)) Debug.Log("right mouse button clicked...");
 
         // Keyboard Inputs
         keyboard = Keyboard.current;
