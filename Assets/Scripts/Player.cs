@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private Animator animator;
     private float pitch = 0f;
-    private Keyboard keyboard;
     private Vector3 velocity;
 
     // animation bools
@@ -53,37 +52,33 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(1)) Debug.Log("right mouse button clicked...");
 
         // Keyboard Inputs
-        keyboard = Keyboard.current;
-        if (keyboard != null)
-        {
-            float x = 0f;
-            float z = 0f;
-            float run = 1.0f;
+        float x = 0f;
+        float z = 0f;
+        float run = 1.0f;
 
-            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) z += 1f;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) z += 1f;
 
-            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) z -= 1f;
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) z -= 1f;
 
-            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) x += 1f;
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) x += 1f;
 
-            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) x -= 1f;
-            // set speed to running speed if left shift is pressed
-            if (keyboard.leftShiftKey.isPressed) run = runSpeed;
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) x -= 1f;
+        // set speed to running speed if left shift is pressed
+        if (Input.GetKey(KeyCode.LeftShift)) run = runSpeed;
 
-            // get the camra forward and right
-            Vector3 camForward = cameraTransform.forward;
-            Vector3 camRight = cameraTransform.right;
+        // get the camra forward and right
+        Vector3 camForward = cameraTransform.forward;
+        Vector3 camRight = cameraTransform.right;
 
-            camForward.y = 0f;
-            camRight.y = 0f;
+        camForward.y = 0f;
+        camRight.y = 0f;
 
-            // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
-            velocity = (camRight.normalized * x + camForward.normalized * z) * speed * run;
+        // calculate the movement based on normalized cam direction and the velocity applied with keyboard inputs
+        velocity = (camRight.normalized * x + camForward.normalized * z) * speed * run;
 
-            // see if the walking or running animation should play
-            walking  = new Vector2(velocity.x, velocity.z).sqrMagnitude > 0.01f;
-            running = run > 1.0f;
-        }
+        // see if the walking or running animation should play
+        walking  = new Vector2(velocity.x, velocity.z).sqrMagnitude > 0.01f;
+        running = run > 1.0f;
 
         // Set Bools for Animator
         animator.SetBool("walking", walking);
