@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 interface IObject
 {
-    public void Grab();
+    public void LeftClick();
+    public void RightClick();
 }
 
 public class Interact : MonoBehaviour
@@ -12,21 +13,15 @@ public class Interact : MonoBehaviour
     public Transform Cam;
     public float range = 10.0f;
 
-    // input refs
-    private Mouse mouse;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // get mouse
-        mouse = Mouse.current;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // attempt to grab object when left mouse button is pressed
-        if (mouse.leftButton.isPressed)
+        // attempt to left click object
+        if (Input.GetMouseButtonDown(0))
         {
             Ray r = new Ray(Cam.position, Cam.forward);
 
@@ -34,7 +29,21 @@ public class Interact : MonoBehaviour
             {
                 if (hitInfo.collider.gameObject.TryGetComponent(out IObject obj))
                 {
-                    obj.Grab();
+                    obj.LeftClick();
+                }
+            }
+        }
+
+        // attempt to right click object
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray r = new Ray(Cam.position, Cam.forward);
+
+            if (Physics.Raycast(r, out RaycastHit hitInfo, range))
+            {
+                if (hitInfo.collider.gameObject.TryGetComponent(out IObject obj))
+                {
+                    obj.RightClick();
                 }
             }
         }
