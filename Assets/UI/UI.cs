@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
