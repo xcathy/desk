@@ -26,6 +26,7 @@ public class Interact : MonoBehaviour
 
             if (Physics.Raycast(r, out RaycastHit hitInfo, range))
             {
+                //Debug.Log("raycast hit: " + hitInfo.collider.name);
                 if (hitInfo.collider.gameObject.TryGetComponent(out IObject obj))
                 {
                     obj.LeftClick();
