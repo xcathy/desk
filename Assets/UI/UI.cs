@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    // Input vars
-    private Keyboard keyboard;
-    private Mouse mouse;
     // Reference vars
     private VisualElement root;
     // menu
@@ -27,10 +24,6 @@ public class UI : MonoBehaviour
 
     void Start()
     {
-        // referencing the inputs
-        keyboard =  Keyboard.current;
-        mouse = Mouse.current;
-
         // referencing the UI elements
         root = GetComponent<UIDocument>().rootVisualElement;
         menu = root.Q<VisualElement>("menu");
@@ -59,9 +52,8 @@ public class UI : MonoBehaviour
     void Update()
     {
         // if ESC is pressed, show the menu
-        if (keyboard != null)
-        {
-            if (keyboard.escapeKey.isPressed) menu.style.display = DisplayStyle.Flex;
+        if (Input.GetKey(KeyCode.Escape)) {
+            menu.style.display = DisplayStyle.Flex;
             // show the mouse
             UnityEngine.Cursor.lockState = CursorLockMode.None;
             UnityEngine.Cursor.visible = true;
