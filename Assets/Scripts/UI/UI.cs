@@ -26,6 +26,10 @@ public class UI : MonoBehaviour
     private bool resume;
     private bool exit;
 
+    // timer
+    private float inventoryTimer = 0f;
+    private float inventoryTimeLimit = 20.0f;
+
     void Start()
     {
         // Instancing
@@ -64,6 +68,13 @@ public class UI : MonoBehaviour
         // if SPACE is pressed, hide the dialogue
         if (Input.GetKey(KeyCode.Space)) {
             HideDialogue();
+        }
+        // if ScrollWheel is activated, change the seleted item in inventory
+        // if nothing happens for a long time, hide inventory
+        inventoryTimer += 0.01f;
+        if (inventoryTimer > inventoryTimeLimit)
+        {
+            hideInventory();
         }
     }
 
@@ -127,6 +138,9 @@ public class UI : MonoBehaviour
     public void showInventory()
     {
         items.AddToClassList("show");
+        // set show inventory timer to 0
+        inventoryTimer = 0f;
+
     }
     public void hideInventory()
     {
