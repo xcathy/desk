@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
 
         // get interaction inputs from mouse clicks
         interact = Input.GetMouseButton(0);
-        if (Input.GetMouseButton(1)) Debug.Log("right mouse button clicked...");
 
         // Keyboard Inputs
         float x = 0f;
