@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class UI : MonoBehaviour
 {
+    // UI Instancing
+    public static UI Instance { get; private set; }
+
     // Reference vars
     private VisualElement root;
     // menu
@@ -13,6 +17,7 @@ public class UI : MonoBehaviour
     private Button exitBtn;
     // dialogue
     private VisualElement dialogue;
+    private Label text;
     // items
     private VisualElement items;
 
@@ -23,6 +28,9 @@ public class UI : MonoBehaviour
 
     void Start()
     {
+        // Instancing
+        Instance = this;
+
         // referencing the UI elements
         root = GetComponent<UIDocument>().rootVisualElement;
         menu = root.Q<VisualElement>("menu");
@@ -32,6 +40,7 @@ public class UI : MonoBehaviour
         exitBtn = menu.Q<Button>("EXIT");
         // dialogue box
         dialogue = root.Q<VisualElement>("dialogue");
+        text = root.Q<Label>("text");
         // item box
         items = root.Q<VisualElement>("items");
 
@@ -52,11 +61,17 @@ public class UI : MonoBehaviour
     {
         // if ESC is pressed, show the menu
         if (Input.GetKey(KeyCode.Escape)) {
-            menu.style.display = DisplayStyle.Flex;
-            // show the mouse
-            UnityEngine.Cursor.lockState = CursorLockMode.None;
-            UnityEngine.Cursor.visible = true;
+            Menu();
         }
+    }
+
+    // Menu
+    public void Menu()
+    {
+        menu.style.display = DisplayStyle.Flex;
+        // show the mouse
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
     }
 
     void StartOver()
@@ -79,4 +94,32 @@ public class UI : MonoBehaviour
         // force stop the game
         Application.Quit();
     }
+
+    // Dialogue display
+    public void ShowDialogue(string textContent, float delay = 0.03f)
+    {
+        dialogue.style.display = DisplayStyle.Flex;
+        Debug.Log("trying to display dialogue...");
+        // stop previous typing
+        StopAllCoroutines();
+        // start new typing
+        StartCoroutine(Typing(textContent, delay));
+    }
+
+    public void HideDialogue()
+    {
+        dialogue.style.display = DisplayStyle.None;
+    }
+
+    private IEnumerator Typing(string dialogue, float delay)
+    {
+        text.text = "";
+
+        foreach (char c in dialogue)
+        {
+            text.text += c;
+            yield return new WaitForSeconds(delay);
+        }
+    }
+
 }

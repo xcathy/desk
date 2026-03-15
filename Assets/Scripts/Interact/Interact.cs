@@ -27,7 +27,7 @@ public class Interact : MonoBehaviour
 
         if (Physics.Raycast(r, out RaycastHit hit, range))
         {
-            Debug.Log("raycast hit: " + hit.collider.name);
+            //Debug.Log("raycast hit: " + hit.collider.name);
             var obj = hit.collider.GetComponentInParent<IObject>();
             if (obj != null)
             {
