@@ -620,6 +620,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1783467451}
   m_SourcePrefab: {fileID: 100100000, guid: 6147de05ae74a6d409e100dce2895ba7, type: 3}
+--- !u!1 &141688168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141688169}
+  - component: {fileID: 141688170}
+  m_Layer: 0
+  m_Name: MenuSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141688169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141688168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2091248819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141688170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141688168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee5f4762b3dfad4e8b1920a415722ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIMenu
+  uiDocument: {fileID: 252206661}
 --- !u!1 &151112939
 GameObject:
   m_ObjectHideFlags: 0
@@ -8759,6 +8804,7 @@ Transform:
   - {fileID: 252206662}
   - {fileID: 664438542}
   - {fileID: 880404248}
+  - {fileID: 141688169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2092807712 stripped
