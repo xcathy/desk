@@ -24,13 +24,15 @@ public class Interact : MonoBehaviour
         {
             Ray r = new Ray(Cam.position, Cam.forward);
 
-            if (Physics.Raycast(r, out RaycastHit hitInfo, range))
+            if (Physics.Raycast(r, out RaycastHit hit, range))
             {
-                Debug.Log("raycast hit: " + hitInfo.collider.name);
-                if (hitInfo.collider.gameObject.TryGetComponent(out IObject obj))
+                Debug.Log("raycast hit: " + hit.collider.name);
+                var obj = hit.collider.GetComponentInParent<IObject>();
+                if (obj != null)
                 {
                     obj.LeftClick();
                 }
+
             }
         }
 
