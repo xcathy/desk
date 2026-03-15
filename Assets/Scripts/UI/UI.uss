@@ -204,6 +204,10 @@
     margin-right: 0%;
     margin-bottom: 0%;
     margin-left: 0%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 #box {
@@ -227,10 +231,10 @@
     margin-bottom: 0%;
     position: relative;
     font-size: 60px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 27px;
     -unity-text-generator: standard;
     flex-direction: column;
 }
@@ -258,4 +262,30 @@
     aspect-ratio: 1;
     flex-basis: auto;
     background-image: url("project://database/Assets/Sprites/UI/icon1%201.png?fileID=2800000&guid=138d55955b67e4f4a99fa96848fe6f2f&type=3#icon1 1");
+    border-top-left-radius: 69px;
+    border-top-right-radius: 69px;
+    border-bottom-right-radius: 69px;
+    border-bottom-left-radius: 69px;
+}
+
+#text {
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: 80%;
+    height: 80%;
+    top: 0%;
+    left: 0%;
+    margin-top: 3%;
+    margin-right: 7%;
+    margin-bottom: 3%;
+    margin-left: 7%;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=8e224a1ed032b7f4b926e3306804102e&type=3#NotInter-Regular");
+    text-overflow: ellipsis;
 }
