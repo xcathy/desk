@@ -14,8 +14,8 @@
     top: -20%;
     justify-content: center;
     align-self: center;
-    align-content: center;
-    width: 80%;
+    align-content: stretch;
+    width: 60%;
     background-color: rgb(67, 67, 67);
     opacity: 0.8;
     -unity-text-align: upper-center;
@@ -30,10 +30,10 @@
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     aspect-ratio: auto;
     height: 20%;
     flex-direction: row;
@@ -45,8 +45,8 @@
     top: 0;
     justify-content: center;
     align-self: center;
-    align-content: center;
-    width: 80%;
+    align-content: stretch;
+    width: 60%;
     background-color: rgb(67, 67, 67);
     opacity: 0.8;
     -unity-text-align: upper-center;
@@ -61,10 +61,10 @@
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     aspect-ratio: auto;
     height: 20%;
     flex-direction: row;
@@ -72,38 +72,21 @@
 }
 
 .slot {
-    position: relative;
-    top: auto;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    width: auto;
-    background-color: rgb(31, 31, 31);
-    opacity: 0.8;
-    -unity-text-align: upper-center;
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    -unity-background-image-tint-color: rgb(72, 72, 72);
-    background-image: none;
-    -unity-text-auto-size: none;
-    font-size: 30px;
-    align-items: center;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    aspect-ratio: 1;
-    height: auto;
-    flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    align-items: stretch;
+    justify-content: space-between;
+    align-self: center;
+    align-content: stretch;
+    height: 80%;
+    aspect-ratio: 1;
+    border-top-left-radius: 55%;
+    border-top-right-radius: 55%;
+    border-bottom-right-radius: 55%;
+    border-bottom-left-radius: 55%;
+    margin-top: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 0.5%;
 }
 
 #menu {

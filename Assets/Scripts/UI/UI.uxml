@@ -1,11 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Scripts/UI/UI.uss?fileID=7433441132597879392&amp;guid=6dbd89e1e12fcc444a756fa9b2a5ff9c&amp;type=3#UI"/>
-    <ui:VisualElement name="items" style="flex-grow: 1;">
-        <ui:VisualElement name="slotA" class="slot" style="flex-grow: 1;"/>
-        <ui:VisualElement name="slotB" class="slot" style="flex-grow: 1;"/>
-        <ui:VisualElement name="slotC" class="slot" style="flex-grow: 1;"/>
-        <ui:VisualElement name="slotD" class="slot" style="flex-grow: 1;"/>
-        <ui:VisualElement name="slotE" class="slot" style="flex-grow: 1;"/>
+    <ui:VisualElement name="items" style="flex-grow: 1; display: flex;">
+        <ui:Image name="slot0" class="slot" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5866165431930342980&amp;guid=8e224a1ed032b7f4b926e3306804102e&amp;type=3#Remove@2x&quot;); background-color: rgb(51, 51, 51);"/>
+        <ui:Image name="slot1" class="slot" style="background-image: url(&quot;project://database/Assets/Sprites/Items/note_icon.png?fileID=21300000&amp;guid=fb513082bb1c1304c987e8182a2ed8e3&amp;type=3#note_icon&quot;); background-color: rgb(51, 51, 51);"/>
+        <ui:Image name="slot2" class="slot" style="background-color: rgb(51, 51, 51);"/>
+        <ui:Image name="slot3" class="slot" style="background-color: rgb(51, 51, 51);"/>
+        <ui:Image name="slot4" class="slot" style="background-color: rgb(51, 51, 51);"/>
+        <ui:Image name="slot5" class="slot" style="background-color: rgb(51, 51, 51);"/>
     </ui:VisualElement>
     <ui:VisualElement name="menu" style="flex-grow: 1; width: 30%;">
         <ui:Button text="STARTOVER" name="STARTOVER" style="position: relative;"/>
@@ -13,7 +14,7 @@
         <ui:Button text="EXIT" name="EXIT" style="position: relative;"/>
     </ui:VisualElement>
     <ui:VisualElement name="dialogue" style="flex-grow: 1; flex-direction: row;">
-        <ui:Image name="icon"/>
+        <ui:Image name="icon" style="border-top-left-radius: 100%; border-top-right-radius: 100%; border-bottom-right-radius: 100%; border-bottom-left-radius: 100%;"/>
         <ui:VisualElement name="box" style="flex-grow: 1;">
             <ui:Label text="Hello World&#10;" name="text"/>
             <ui:Image name="space" source="project://database/Assets/Sprites/UI/space.png?fileID=21300000&amp;guid=08f74730f5dedc049926c77b9e9d10b4&amp;type=3#space"/>
