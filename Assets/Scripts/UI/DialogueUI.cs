@@ -1,16 +1,16 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class UI : MonoBehaviour
+public class DialogueUI : MonoBehaviour
 {
-    // UI Instancing
-    public static UI Instance { get; private set; }
-
-    // Reference vars
+    // Instancing
+    public static DialogueUI Instance { get; private set; }
+    
+    // public refs
+    public UIDocument UIDoc;
+    // private refs
     private VisualElement root;
-    // dialogue
     private VisualElement dialogue;
     private Label text;
 
@@ -19,9 +19,7 @@ public class UI : MonoBehaviour
         // Instancing
         Instance = this;
 
-        // referencing the UI elements
-        root = GetComponent<UIDocument>().rootVisualElement;
-        // dialogue box
+        root = UIDoc.rootVisualElement;
         dialogue = root.Q<VisualElement>("dialogue");
         text = root.Q<Label>("text");
 
@@ -29,7 +27,6 @@ public class UI : MonoBehaviour
         dialogue.style.display = DisplayStyle.None;
     }
 
-    // Update is called once per frame
     void Update()
     {
         // if SPACE is pressed, hide the dialogue
@@ -53,6 +50,7 @@ public class UI : MonoBehaviour
         dialogue.style.display = DisplayStyle.None;
     }
 
+    // text typing method
     private IEnumerator Typing(string dialogue, float delay)
     {
         text.text = "";

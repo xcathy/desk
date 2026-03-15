@@ -12,7 +12,7 @@ public class Note : MonoBehaviour, IObject
     public void LeftClick()
     {
         // shows dialogue when clicked
-        UI.Instance.ShowDialogue("What is this...?");
+        DialogueUI.Instance.ShowDialogue("What is this...?");
         gameObject.SetActive(false);
         Inventory.Instance.Add(note);
         InventoryUI.Instance.ShowInventory();
