@@ -1657,7 +1657,7 @@ PrefabInstance:
       addedObject: {fileID: 1300837496}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d83ac80328d079419797a156e3cf39f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1300837503}
+      addedObject: {fileID: 1300837506}
   m_SourcePrefab: {fileID: 100100000, guid: 0d83ac80328d079419797a156e3cf39f, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -2248,7 +2248,10 @@ PrefabInstance:
       addedObject: {fileID: 1335461081}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 41767420f2c818546909ad4e51bcebe2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1335461084}
+      addedObject: {fileID: 1335461087}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 41767420f2c818546909ad4e51bcebe2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335461088}
   m_SourcePrefab: {fileID: 100100000, guid: 41767420f2c818546909ad4e51bcebe2, type: 3}
 --- !u!4 &529894412 stripped
 Transform:
@@ -3390,7 +3393,7 @@ PrefabInstance:
       addedObject: {fileID: 899782749}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8c17cbf9de906744a736f19da15ac23, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 899782753}
+      addedObject: {fileID: 899782756}
   m_SourcePrefab: {fileID: 100100000, guid: d8c17cbf9de906744a736f19da15ac23, type: 3}
 --- !u!4 &899782746 stripped
 Transform:
@@ -3445,7 +3448,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.018790783, y: 0.018790778, z: 0.036543265}
   m_Center: {x: -4.6566126e-10, y: 0, z: 0.018271625}
---- !u!114 &899782753
+--- !u!114 &899782756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3454,9 +3457,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 58610097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0d966c877b65f4b8becdf8b565e49b, type: 3}
+  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Lamp
+  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
+  animator: {fileID: 0}
+  boolName: 
   lighting: {fileID: 1232909647}
   intensity: 1.7
 --- !u!1001 &903288437
@@ -4511,7 +4516,7 @@ PrefabInstance:
       addedObject: {fileID: 1356070032}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1356070033}
+      addedObject: {fileID: 1356070037}
   m_SourcePrefab: {fileID: 100100000, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
 --- !u!4 &1225199538 stripped
 Transform:
@@ -4974,7 +4979,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d83ac80328d079419797a156e3cf39f, type: 3}
   m_PrefabInstance: {fileID: 408091829}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1300837503
+--- !u!114 &1300837506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4983,9 +4988,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1300837495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0d966c877b65f4b8becdf8b565e49b, type: 3}
+  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Lamp
+  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
+  animator: {fileID: 0}
+  boolName: 
   lighting: {fileID: 1809563803}
   intensity: 4.11
 --- !u!1 &1322384216
@@ -5065,9 +5072,31 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4562517, y: 2.3611991, z: 4.307244}
-  m_Center: {x: -0.0000035580529, y: -0.022065861, z: 0.9646169}
---- !u!114 &1335461084
+  m_Size: {x: 1.8984963, y: 2.3611991, z: 4.3072433}
+  m_Center: {x: 0.020098254, y: -0.022065856, z: 0.9646164}
+--- !u!95 &1335461087
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335461078}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c261a922e7751c8468b0db257dcfed50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1335461088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5076,9 +5105,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335461078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0d966c877b65f4b8becdf8b565e49b, type: 3}
+  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Lamp
+  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
+  animator: {fileID: 1335461087}
+  boolName: flip
   lighting: {fileID: 1280876665}
   intensity: 5
 --- !u!1 &1347437437 stripped
@@ -5166,18 +5197,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1356070033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356070024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f68c5ce4ac6d0c488259baba031b3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Carpet
 --- !u!65 &1356070034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5199,6 +5218,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02011985, y: 0.018820744, z: 0.00029332374}
   m_Center: {x: 0.00068053947, y: 1.2876674e-11, z: 0.00015261928}
+--- !u!114 &1356070037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356070024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
+  animator: {fileID: 1356070032}
+  boolName: move
+  lighting: {fileID: 0}
+  intensity: 0
 --- !u!4 &1362055364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4050295581307752939, guid: 0d83ac80328d079419797a156e3cf39f, type: 3}
