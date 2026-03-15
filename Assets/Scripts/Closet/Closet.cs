@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Closet : MonoBehaviour, IObject
 {
+    // UI canvas refs
+    public GameObject hintCanvas;
     // public transform refs
     public Transform doorL;
     public Transform doorR;
@@ -9,14 +11,16 @@ public class Closet : MonoBehaviour, IObject
     private Animator doorLAnimator;
     private Animator doorRAnimator;
 
+    public void Hover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(true);
+        }
+    }
     public void LeftClick()
     {
         doorLAnimator.SetBool("open", false);
         doorRAnimator.SetBool("open", false);
-    }
-    public void RightClick()
-    {
-        Debug.Log("optional interaction");
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

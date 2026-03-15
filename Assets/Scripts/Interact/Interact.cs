@@ -2,8 +2,8 @@ using UnityEngine;
 
 interface IObject
 {
+    public void Hover();
     public void LeftClick();
-    public void RightClick();
 }
 
 public class Interact : MonoBehaviour
@@ -19,35 +19,23 @@ public class Interact : MonoBehaviour
 
     void Update()
     {
-        // attempt to left click object
-        if (Input.GetMouseButtonDown(0))
+        
+        // looking around the world
+        Ray r = new Ray(Cam.position, Cam.forward);
+
+        if (Physics.Raycast(r, out RaycastHit hit, range))
         {
-            Ray r = new Ray(Cam.position, Cam.forward);
-
-            if (Physics.Raycast(r, out RaycastHit hit, range))
+            Debug.Log("raycast hit: " + hit.collider.name);
+            var obj = hit.collider.GetComponentInParent<IObject>();
+            if (obj != null)
             {
-                Debug.Log("raycast hit: " + hit.collider.name);
-                var obj = hit.collider.GetComponentInParent<IObject>();
-                if (obj != null)
-                {
-                    obj.LeftClick();
-                }
-
+                // hover on object
+                obj.Hover();
+                // attempt to left click object
+                if (Input.GetMouseButtonDown(0)) obj.LeftClick();
+                
             }
-        }
 
-        // attempt to right click object
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray r = new Ray(Cam.position, Cam.forward);
-
-            if (Physics.Raycast(r, out RaycastHit hitInfo, range))
-            {
-                if (hitInfo.collider.gameObject.TryGetComponent(out IObject obj))
-                {
-                    obj.RightClick();
-                }
-            }
         }
     }
 }

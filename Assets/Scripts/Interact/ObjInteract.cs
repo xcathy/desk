@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ObjInteract : MonoBehaviour, IObject
 {
+    // UI canvas refs
+    public GameObject hintCanvas;
     // animator refs
     public Animator animator;
     public string boolName;
@@ -12,6 +14,12 @@ public class ObjInteract : MonoBehaviour, IObject
     // light bools
     private bool on = false;
 
+    public void Hover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(true);
+        }
+    }
     public void LeftClick()
     {
         // if animator is present
@@ -25,10 +33,6 @@ public class ObjInteract : MonoBehaviour, IObject
         {
             on = !on;
         }
-    }
-    public void RightClick()
-    {
-        Debug.Log("optional interaction");
     }
 
     void Start()
