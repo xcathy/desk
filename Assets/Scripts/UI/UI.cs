@@ -63,6 +63,10 @@ public class UI : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape)) {
             Menu();
         }
+        // if SPACE is pressed, hide the dialogue
+        if (Input.GetKey(KeyCode.Space)) {
+            HideDialogue();
+        }
     }
 
     // Menu
@@ -96,10 +100,9 @@ public class UI : MonoBehaviour
     }
 
     // Dialogue display
-    public void ShowDialogue(string textContent, float delay = 0.03f)
+    public void ShowDialogue(string textContent, float delay = 0.05f)
     {
         dialogue.style.display = DisplayStyle.Flex;
-        Debug.Log("trying to display dialogue...");
         // stop previous typing
         StopAllCoroutines();
         // start new typing

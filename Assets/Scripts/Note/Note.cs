@@ -11,18 +11,6 @@ public class Note : MonoBehaviour, IObject
     {
         // shows dialogue when clicked
         UI.Instance.ShowDialogue("What is this...?");
-    }
-
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            UI.Instance.HideDialogue();
-        }
+        gameObject.SetActive(false);
     }
 }
