@@ -11,6 +11,37 @@
 
 #items {
     position: absolute;
+    top: -15%;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 80%;
+    background-color: rgb(67, 67, 67);
+    opacity: 0.8;
+    -unity-text-align: upper-center;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    -unity-background-image-tint-color: rgb(72, 72, 72);
+    background-image: none;
+    -unity-text-auto-size: none;
+    font-size: 30px;
+    align-items: stretch;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    aspect-ratio: auto;
+    height: 20%;
+    flex-direction: row;
+    transition: top 0.3s ease-in-out;
+}
+
+#items.show {
+    position: absolute;
     top: 0;
     justify-content: center;
     align-self: center;
@@ -37,6 +68,7 @@
     aspect-ratio: auto;
     height: 20%;
     flex-direction: row;
+    transition: top 0.3s ease-in-out;
 }
 
 .slot {

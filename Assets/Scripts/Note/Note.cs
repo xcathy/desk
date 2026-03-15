@@ -15,5 +15,6 @@ public class Note : MonoBehaviour, IObject
         UI.Instance.ShowDialogue("What is this...?");
         gameObject.SetActive(false);
         Inventory.Instance.Add(note);
+        UI.Instance.showInventory();
     }
 }

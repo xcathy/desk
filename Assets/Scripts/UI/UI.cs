@@ -47,8 +47,6 @@ public class UI : MonoBehaviour
         // default hide the menu and dialogue box
         menu.style.display = DisplayStyle.None;
         dialogue.style.display = DisplayStyle.None;
-        // default partially hide the items
-        items.style.top = Length.Percent(-15);
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();
@@ -123,6 +121,16 @@ public class UI : MonoBehaviour
             text.text += c;
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    // Inventory display
+    public void showInventory()
+    {
+        items.AddToClassList("show");
+    }
+    public void hideInventory()
+    {
+        items.RemoveFromClassList("show");
     }
 
 }
