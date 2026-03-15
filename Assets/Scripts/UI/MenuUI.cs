@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
-public class UIMenu : MonoBehaviour
+public class MenuUI : MonoBehaviour
 {
     // public refs
     public UIDocument UIDoc;
