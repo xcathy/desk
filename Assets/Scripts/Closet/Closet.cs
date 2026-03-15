@@ -17,6 +17,12 @@ public class Closet : MonoBehaviour, IObject
             hintCanvas.SetActive(true);
         }
     }
+    public void Unhover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(false);
+        }
+    }
     public void LeftClick()
     {
         doorLAnimator.SetBool("open", false);

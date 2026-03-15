@@ -20,6 +20,12 @@ public class ObjInteract : MonoBehaviour, IObject
             hintCanvas.SetActive(true);
         }
     }
+    public void Unhover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(false);
+        }
+    }
     public void LeftClick()
     {
         // if animator is present
