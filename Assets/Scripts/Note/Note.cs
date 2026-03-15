@@ -31,6 +31,9 @@ public class Note : MonoBehaviour, IObject
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space) && dialogue.style.display == DisplayStyle.Flex)
+        {
+            dialogue.style.display = DisplayStyle.None;
+        }
     }
 }

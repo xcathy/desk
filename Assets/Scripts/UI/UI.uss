@@ -289,3 +289,21 @@
     -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=8e224a1ed032b7f4b926e3306804102e&type=3#NotInter-Regular");
     text-overflow: ellipsis;
 }
+
+#space {
+    right: 0%;
+    bottom: 0%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 1;
+    flex-direction: column;
+    margin-top: 0%;
+    margin-right: 3%;
+    margin-bottom: 0%;
+    margin-left: 3%;
+}
