@@ -36,14 +36,26 @@ public class InventoryUI : MonoBehaviour
             if (scroll > 0.0f)
             {
                 ShowInventory();
-                Debug.Log("scroll up");
+                if (Inventory.Instance.selected == 5) {
+                    Inventory.Instance.selected = 0;
+                } else
+                {
+                    Inventory.Instance.selected ++;
+                }
             }
 
             if (scroll < 0.0f)
             {
                 ShowInventory();
-                Debug.Log("scroll down");
+                if (Inventory.Instance.selected == 0) {
+                    Inventory.Instance.selected = 5;
+                } else
+                {
+                    Inventory.Instance.selected --;
+                }
             }
+
+            Debug.Log("currently selected: " + Inventory.Instance.selected);
         }
         
         // if nothing happens for a long time, hide inventory

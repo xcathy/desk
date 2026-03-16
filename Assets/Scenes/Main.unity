@@ -3577,7 +3577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b655fc161b73461449d3b06f1475ae2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  items: []
+  itemList:
+  - {fileID: 11400000, guid: af4fa4d0bc3d60f499ab25fe1474c340, type: 2}
+  selected: 0
 --- !u!1 &889916847
 GameObject:
   m_ObjectHideFlags: 0
