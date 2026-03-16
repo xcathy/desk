@@ -26,18 +26,34 @@ public class Inventory : MonoBehaviour
         InventoryUI.Instance.ChangeImg(selected, item.icon);
         InventoryUI.Instance.HightlightSlot(selected);
 
+        SetPreview(item.itemName);
+    }
+
+    // set the preview of the selected item to active
+    public void SetPreview(string objName)
+    {
         // set the preview object in the list to be active
         foreach (Transform childObj in previewObj)
         {
             GameObject child = childObj.gameObject;
 
-            Debug.Log(child.name);
-            if (child.name == item.itemName) {
+            if (child.name == objName) {
                 child.SetActive(true);
             } else
             {
                 child.SetActive(false);
             }
+        }
+    }
+
+    // unset the preview
+    public void UnSetPreview()
+    {
+        // set the preview object in the list to be active
+        foreach (Transform childObj in previewObj)
+        {
+            GameObject child = childObj.gameObject;
+            child.SetActive(false);
         }
     }
 

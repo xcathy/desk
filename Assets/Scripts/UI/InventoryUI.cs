@@ -75,6 +75,15 @@ public class InventoryUI : MonoBehaviour
             }
             // add the selected effect on the current selected slot
             HightlightSlot(Inventory.Instance.selected);
+
+            // change the preview item to the currently selected
+            if (Inventory.Instance.selected > 0 && Inventory.Instance.selected < Inventory.Instance.itemList.Count)
+            {
+                Inventory.Instance.SetPreview(Inventory.Instance.itemList[Inventory.Instance.selected].itemName);
+            } else
+            {
+                Inventory.Instance.UnSetPreview();
+            }
         }
         
         // if nothing happens for a long time, hide inventory
