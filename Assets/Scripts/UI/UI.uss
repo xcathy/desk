@@ -393,5 +393,5 @@
     right: auto;
     left: auto;
     bottom: 0%;
-    aspect-ratio: 1;
+    aspect-ratio: 2;
 }
