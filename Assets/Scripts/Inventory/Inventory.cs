@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour
         InventoryUI.Instance.UnHightlightSlot(selected);
         // set selected to be the current position of the added item
         selected = itemList.Count - 1;
-        Debug.Log("itemList count: " + itemList.Count);
 
         // set the image of the slot to be the item image
         InventoryUI.Instance.ChangeImg(selected, item.icon);
