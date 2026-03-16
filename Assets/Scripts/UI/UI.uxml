@@ -20,5 +20,6 @@
             <ui:Image name="space" source="project://database/Assets/Sprites/UI/space.png?fileID=21300000&amp;guid=08f74730f5dedc049926c77b9e9d10b4&amp;type=3#space"/>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="magnify" style="flex-grow: 1; position: absolute;"/>
+    <ui:VisualElement name="previewBG"/>
+    <ui:VisualElement name="preview" style="flex-grow: 1;"/>
 </ui:UXML>

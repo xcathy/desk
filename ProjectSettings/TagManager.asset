@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Preview
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Preview
+    uniqueID: 1487824241
     locked: 0
   m_RenderingLayers:
   - Default

@@ -26,7 +26,6 @@ public class Plushie : MonoBehaviour, IObject
         Inventory.Instance.Add(plushie);
         InventoryUI.Instance.ShowInventory();
     }
-
 }
 
 
