@@ -34,6 +34,9 @@ public class InventoryUI : MonoBehaviour
         {
             slots[i] = root.Q<Image>("slot" + (char)('0' + i));
         }
+
+        // default selected highlight
+        HightlightSlot(Inventory.Instance.selected);
     }
     void Update()
     {
@@ -43,7 +46,7 @@ public class InventoryUI : MonoBehaviour
         if (scroll != 0.0f)
         {
             // remove selected from the previous slot
-            slots[Inventory.Instance.selected].RemoveFromClassList("selected");
+            UnHightlightSlot(Inventory.Instance.selected);
             
             if (scroll > 0.0f)
             {
@@ -72,7 +75,7 @@ public class InventoryUI : MonoBehaviour
             }
 
             // add the selected effect on the current selected slot
-            slots[Inventory.Instance.selected].AddToClassList("selected");
+            HightlightSlot(Inventory.Instance.selected);
         }
         
         // if nothing happens for a long time, hide inventory
@@ -81,6 +84,16 @@ public class InventoryUI : MonoBehaviour
         {
             HideInventory();
         }
+    }
+    // add hightlight to selected slot
+    public void HightlightSlot(int slotNum)
+    {
+        slots[slotNum].AddToClassList("selected");
+    }
+    // remove hightlight to selected slot
+    public void UnHightlightSlot(int slotNum)
+    {
+        slots[slotNum].RemoveFromClassList("selected");
     }
     // Inventory display
     public void ShowInventory()
@@ -93,5 +106,10 @@ public class InventoryUI : MonoBehaviour
     public void HideInventory()
     {
         items.RemoveFromClassList("show");
+    }
+    // change image of the selected slot
+    public void ChangeImg(int slotNum, Sprite img)
+    {
+        //slots[slotNum].style.backgroundImage = img;
     }
 }
