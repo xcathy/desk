@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     // private refs
     private VisualElement root;
     private VisualElement items;
+    private Image[] slots;
     private float scroll;
 
     // timer
@@ -25,6 +26,14 @@ public class InventoryUI : MonoBehaviour
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
         items = root.Q<VisualElement>("items");
+
+        // slots ref
+        slots = new Image[6];
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i] = root.Q<Image>("slot" + (char)('0' + i));
+        }
     }
     void Update()
     {
@@ -33,9 +42,14 @@ public class InventoryUI : MonoBehaviour
 
         if (scroll != 0.0f)
         {
+            // remove selected from the previous slot
+            slots[Inventory.Instance.selected].RemoveFromClassList("selected");
+            
             if (scroll > 0.0f)
             {
+                // show inventory
                 ShowInventory();
+                // add 1 to selected
                 if (Inventory.Instance.selected == 5) {
                     Inventory.Instance.selected = 0;
                 } else
@@ -46,7 +60,9 @@ public class InventoryUI : MonoBehaviour
 
             if (scroll < 0.0f)
             {
+                // show inventory
                 ShowInventory();
+                // delete 1 from selected
                 if (Inventory.Instance.selected == 0) {
                     Inventory.Instance.selected = 5;
                 } else
@@ -55,7 +71,8 @@ public class InventoryUI : MonoBehaviour
                 }
             }
 
-            Debug.Log("currently selected: " + Inventory.Instance.selected);
+            // add the selected effect on the current selected slot
+            slots[Inventory.Instance.selected].AddToClassList("selected");
         }
         
         // if nothing happens for a long time, hide inventory
