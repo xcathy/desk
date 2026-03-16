@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
         Debug.Log("itemList count: " + itemList.Count);
 
         // set the image of the slot to be the item image
-        //InventoryUI.Instance.ChangeImg(selected, itemList[itemList.Count - 1].icon);
+        InventoryUI.Instance.ChangeImg(selected, item.icon);
         InventoryUI.Instance.HightlightSlot(selected);
     }
 

@@ -108,8 +108,8 @@ public class InventoryUI : MonoBehaviour
         items.RemoveFromClassList("show");
     }
     // change image of the selected slot
-    public void ChangeImg(int slotNum, Sprite img)
+    public void ChangeImg(int slotNum, Texture2D img)
     {
-        //slots[slotNum].style.backgroundImage = img;
+        slots[slotNum].style.backgroundImage = img;
     }
 }

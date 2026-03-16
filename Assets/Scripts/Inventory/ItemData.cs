@@ -5,6 +5,6 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public string itemName;
-    public Sprite icon;
+    public Texture2D icon;
     public string description;
 }
