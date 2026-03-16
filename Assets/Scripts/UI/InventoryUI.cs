@@ -73,7 +73,6 @@ public class InventoryUI : MonoBehaviour
                     Inventory.Instance.selected --;
                 }
             }
-
             // add the selected effect on the current selected slot
             HightlightSlot(Inventory.Instance.selected);
         }
@@ -101,7 +100,6 @@ public class InventoryUI : MonoBehaviour
         items.AddToClassList("show");
         // set show inventory timer to 0
         inventoryTimer = 0f;
-
     }
     public void HideInventory()
     {
