@@ -21,6 +21,7 @@ public class DoorKnob : MonoBehaviour, IObject {
         {
             // if key is not selected, attempt to turn the doorknob, fail
             doorKnobAnimator.SetTrigger("turn");
+            DialogueUI.Instance.ShowDialogue("The door is locked.");
 
             // if key is selected, unlock
             if (key)
