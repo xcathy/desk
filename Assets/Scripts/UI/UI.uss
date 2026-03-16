@@ -109,98 +109,25 @@
     width: 100%;
 }
 
-#STARTOVER {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
+.menuBtn {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     align-items: center;
     justify-content: center;
     align-self: center;
-    align-content: center;
-    opacity: 1;
     flex-wrap: wrap;
-    margin-right: 3%;
-    margin-left: 3%;
-    background-color: rgb(152, 152, 152);
-    display: flex;
-    width: 80%;
-    height: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    position: relative;
-    aspect-ratio: 3;
-    flex-basis: auto;
-    background-image: none;
-    font-size: 60px;
-    border-top-left-radius: 84px;
-    border-top-right-radius: 84px;
-    border-bottom-right-radius: 84px;
-    border-bottom-left-radius: 84px;
-    -unity-font-style: normal;
+    width: 60%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 
-#RESUME {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    opacity: 1;
-    flex-wrap: wrap;
-    margin-right: 3%;
-    margin-left: 3%;
-    background-color: rgb(152, 152, 152);
-    display: flex;
-    width: 80%;
-    height: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    position: relative;
-    aspect-ratio: 3;
-    flex-basis: auto;
-    background-image: none;
-    font-size: 60px;
-    border-top-left-radius: 84px;
-    border-top-right-radius: 84px;
-    border-bottom-right-radius: 84px;
-    border-bottom-left-radius: 84px;
-    -unity-font-style: normal;
-}
 
-#EXIT {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    opacity: 1;
-    flex-wrap: wrap;
-    margin-right: 3%;
-    margin-left: 3%;
-    background-color: rgb(152, 152, 152);
-    display: flex;
-    width: 80%;
-    height: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    position: relative;
-    aspect-ratio: 3;
-    flex-basis: auto;
-    background-image: none;
-    font-size: 60px;
-    border-top-left-radius: 84px;
-    border-top-right-radius: 84px;
-    border-bottom-right-radius: 84px;
-    border-bottom-left-radius: 84px;
-    -unity-font-style: normal;
-}
+
+
 
 #dialogue {
     position: absolute;
@@ -299,9 +226,9 @@
     margin-right: 7%;
     margin-bottom: 3%;
     margin-left: 7%;
-    font-size: 90px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=8e224a1ed032b7f4b926e3306804102e&type=3#NotInter-Regular");
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans");
     text-overflow: ellipsis;
 }
 
@@ -331,7 +258,7 @@
     right: 0%;
     bottom: 0%;
     background-color: rgb(38, 38, 38);
-    opacity: 0.8;
+    opacity: 0.9;
     transition: display 0.3s ease-in-out;
 }
 
@@ -343,6 +270,6 @@
     right: 0%;
     bottom: 0%;
     background-color: rgb(38, 38, 38);
-    opacity: 0.8;
+    opacity: 0.9;
     transition: display 0.3s ease-in-out;
 }
