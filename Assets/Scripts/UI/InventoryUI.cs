@@ -45,15 +45,17 @@ public class InventoryUI : MonoBehaviour
 
         if (scroll != 0.0f)
         {
+            int lastSelected = Inventory.Instance.selected;
+
             // remove selected from the previous slot
-            UnHightlightSlot(Inventory.Instance.selected);
+            UnHightlightSlot(lastSelected);
             
             if (scroll > 0.0f)
             {
                 // show inventory
                 ShowInventory();
                 // add 1 to selected
-                if (Inventory.Instance.selected == 5) {
+                if (lastSelected == 5) {
                     Inventory.Instance.selected = 0;
                 } else
                 {
@@ -66,20 +68,23 @@ public class InventoryUI : MonoBehaviour
                 // show inventory
                 ShowInventory();
                 // delete 1 from selected
-                if (Inventory.Instance.selected == 0) {
+                if (lastSelected == 0) {
                     Inventory.Instance.selected = 5;
                 } else
                 {
                     Inventory.Instance.selected --;
                 }
             }
+
+            int currSelected = Inventory.Instance.selected;
+
             // add the selected effect on the current selected slot
-            HightlightSlot(Inventory.Instance.selected);
+            HightlightSlot(currSelected);
 
             // change the preview item to the currently selected
-            if (Inventory.Instance.selected > 0 && Inventory.Instance.selected < Inventory.Instance.itemList.Count)
+            if (currSelected > 0 && currSelected < Inventory.Instance.itemList.Count)
             {
-                Inventory.Instance.SetPreview(Inventory.Instance.itemList[Inventory.Instance.selected].itemName);
+                Inventory.Instance.SetPreview(Inventory.Instance.itemList[currSelected].itemName);
             } else
             {
                 Inventory.Instance.UnSetPreview();
