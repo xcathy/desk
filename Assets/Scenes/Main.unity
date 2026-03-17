@@ -5116,6 +5116,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 961503125}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961503128}
   m_SourcePrefab: {fileID: 100100000, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
 --- !u!4 &961503123 stripped
 Transform:
@@ -5148,6 +5151,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7802028, y: 0.78020275, z: 0.18519077}
   m_Center: {x: -0.000000044703473, y: 0.00000008940697, z: 0.09259598}
+--- !u!114 &961503128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d19a44d4e0fb1a4681f13ba93080d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &965024060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5254,8 +5269,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20748258, y: 0.47505328, z: 0.3996572}
-  m_Center: {x: 0.000000032714713, y: -0.007161087, z: 0.03992793}
+  m_Size: {x: 0.20748258, y: 0.53007275, z: 0.45536432}
+  m_Center: {x: 0.000000032714716, y: -0.0052652042, z: 0.06778145}
 --- !u!95 &965024067
 Animator:
   serializedVersion: 7
@@ -5292,6 +5307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1811508708}
   digitAnimator: {fileID: 965024067}
+  passCode: 00000000000000000000000000000000
 --- !u!1 &978582921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7357,8 +7373,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20748258, y: 0.50795764, z: 0.39699024}
-  m_Center: {x: 0.000000032714713, y: 0.015036615, z: 0.038596343}
+  m_Size: {x: 0.20748258, y: 0.50795764, z: 0.44879255}
+  m_Center: {x: 0.000000032714716, y: 0.015036615, z: 0.06449748}
 --- !u!114 &1365041324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7373,6 +7389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1943344969}
   digitAnimator: {fileID: 1365041322}
+  passCode: 00000000000000000000000000000000
 --- !u!4 &1372831802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7f09b9720768a04988ce5a6d4ef4e7f, type: 3}
@@ -8496,8 +8513,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20748258, y: 0.47046185, z: 0.3978444}
-  m_Center: {x: 0.000000032714713, y: -0.0016476847, z: 0.03902345}
+  m_Size: {x: 0.20748258, y: 0.53002185, z: 0.43377298}
+  m_Center: {x: 0.000000032714716, y: -0.008883468, z: 0.056987703}
 --- !u!114 &1566146163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8512,6 +8529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1136824237}
   digitAnimator: {fileID: 1566146161}
+  passCode: 00000000000000000000000000000000
 --- !u!1 &1567853578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b39518f3e7c0338458741bd1c6ee90c9, type: 3}
@@ -10919,8 +10937,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20748258, y: 0.45944774, z: 0.46288338}
-  m_Center: {x: 0.000000032714713, y: -0.013828575, z: -0.012238328}
+  m_Size: {x: 0.20748258, y: 0.5337451, z: 0.4982939}
+  m_Center: {x: 0.000000032714713, y: -0.008890484, z: 0.0054668086}
 --- !u!95 &2018694254
 Animator:
   serializedVersion: 7
@@ -10957,6 +10975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 792659286}
   digitAnimator: {fileID: 2018694254}
+  passCode: 00000000000000000000000000000000
 --- !u!1001 &2034197413
 PrefabInstance:
   m_ObjectHideFlags: 0

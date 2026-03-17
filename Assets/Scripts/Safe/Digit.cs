@@ -28,12 +28,16 @@ public class Digit : MonoBehaviour, IObject
         {
             currDigit++;
         }
-        Debug.Log("curr digit: " + currDigit);
         if (digitAnimator!= null)
         {
             digitAnimator.SetInteger("digit", currDigit);
         }
-        
+
+        // update the code depending on the user inputs
+        if (gameObject.name == "digitA") SafeHandle.Instance.SetDigit(0, currDigit);
+        if (gameObject.name == "digitB") SafeHandle.Instance.SetDigit(1, currDigit);
+        if (gameObject.name == "digitC") SafeHandle.Instance.SetDigit(2, currDigit);
+        if (gameObject.name == "digitD") SafeHandle.Instance.SetDigit(3, currDigit);
     }
     void start()
     {
