@@ -5118,6 +5118,9 @@ PrefabInstance:
       addedObject: {fileID: 961503125}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 961503129}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 961503128}
   m_SourcePrefab: {fileID: 100100000, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
 --- !u!4 &961503123 stripped
@@ -5163,6 +5166,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d19a44d4e0fb1a4681f13ba93080d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  passCode: 00000000000000000000000000000000
+--- !u!95 &961503129
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503124}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f11a5ad56773c434495a4c4ce24b3745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &965024060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5307,7 +5333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1811508708}
   digitAnimator: {fileID: 965024067}
-  passCode: 00000000000000000000000000000000
 --- !u!1 &978582921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,7 +7414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1943344969}
   digitAnimator: {fileID: 1365041322}
-  passCode: 00000000000000000000000000000000
 --- !u!4 &1372831802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7f09b9720768a04988ce5a6d4ef4e7f, type: 3}
@@ -8529,7 +8553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 1136824237}
   digitAnimator: {fileID: 1566146161}
-  passCode: 00000000000000000000000000000000
 --- !u!1 &1567853578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b39518f3e7c0338458741bd1c6ee90c9, type: 3}
@@ -10975,7 +10998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Digit
   hintCanvas: {fileID: 792659286}
   digitAnimator: {fileID: 2018694254}
-  passCode: 00000000000000000000000000000000
 --- !u!1001 &2034197413
 PrefabInstance:
   m_ObjectHideFlags: 0

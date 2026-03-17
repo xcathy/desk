@@ -8,6 +8,7 @@ public class SafeHandle : MonoBehaviour, IObject
     public int[] passCode = new int[4];
     // private refs
     private int[] answerCode = {6,7,8,3};
+    private Animator animator;
 
     public void Hover(){}
     public void Unhover(){}
@@ -18,10 +19,13 @@ public class SafeHandle : MonoBehaviour, IObject
         {
             // if the passcode is 6783, open the safe
             //Debug.Log("passcode correct");
+            animator.SetBool("unlock", true);
         } else
         {
             // otherwise, display dialogue instead
-            //Debug.Log("passCode: " + passCode[0] + passCode[1] + passCode[2] + passCode[3]);
+            DialogueUI.Instance.ShowDialogue("The handle won't turn, seems like " +
+                passCode[0] + passCode[1] + passCode[2] + passCode[3]
+                + " is not the correct passcode.");
         }
     }
     
@@ -33,5 +37,6 @@ public class SafeHandle : MonoBehaviour, IObject
     void Start()
     {
         Instance = this;
+        animator = gameObject.GetComponent<Animator>();
     }
 }
