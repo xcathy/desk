@@ -2,10 +2,21 @@ using UnityEngine;
 
 public class Digit : MonoBehaviour, IObject
 {
+    public GameObject hintCanvas;
     public Animator digitAnimator;
     private int currDigit = 0;
-    public void Hover() {}
-    public void Unhover() {}
+    public void Hover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(true);
+        }
+    }
+    public void Unhover()
+    {
+        if (hintCanvas!= null) {
+            hintCanvas.SetActive(false);
+        }
+    }
     public void LeftClick()
     {
         // turn the digit with each click
@@ -27,6 +38,7 @@ public class Digit : MonoBehaviour, IObject
     void start()
     {
         currDigit = 0;
+        hintCanvas.SetActive(false);
     }
 
 }
