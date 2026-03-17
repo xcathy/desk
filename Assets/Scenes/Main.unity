@@ -2579,13 +2579,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.90624416, y: -0.18988752, z: 0.3475597, w: 0.14787327}
+  m_LocalRotation: {x: 0.9700425, y: -0.13129379, z: 0.03307207, w: 0.201707}
   m_LocalPosition: {x: 21.42, y: 13.55, z: 25.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 23.579, y: -218.76, z: -164.73}
+  m_LocalEulerAnglesHint: {x: 23.579, y: -180.7, z: -164.73}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3450,6 +3450,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f2647825f3e17947b7c88cc462150ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 663670848}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f2647825f3e17947b7c88cc462150ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 663670851}
   m_SourcePrefab: {fileID: 100100000, guid: 8f2647825f3e17947b7c88cc462150ca, type: 3}
 --- !u!4 &663670845 stripped
 Transform:
@@ -3482,6 +3485,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9634527, y: 1.9652109, z: 0.1341656}
   m_Center: {x: -0.8675599, y: -0.0084299045, z: -0.00000014580273}
+--- !u!95 &663670851
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663670846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1cca83d0cfd2864bb20ad02b2e07da7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &664438539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,6 +5195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   passCode: 00000000000000000000000000000000
+  safeDoorAnimator: {fileID: 663670851}
 --- !u!95 &961503129
 Animator:
   serializedVersion: 7

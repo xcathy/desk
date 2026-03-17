@@ -6,6 +6,7 @@ public class SafeHandle : MonoBehaviour, IObject
     public static SafeHandle Instance { get; private set; }
     // public refs
     public int[] passCode = new int[4];
+    public Animator safeDoorAnimator;
     // private refs
     private int[] answerCode = {6,7,8,3};
     private Animator animator;
@@ -18,8 +19,9 @@ public class SafeHandle : MonoBehaviour, IObject
         if (passCode.SequenceEqual(answerCode))
         {
             // if the passcode is 6783, open the safe
-            //Debug.Log("passcode correct");
+            DialogueUI.Instance.ShowDialogue("It opened!");
             animator.SetBool("unlock", true);
+            safeDoorAnimator.SetBool("unlock", true);
         } else
         {
             // otherwise, display dialogue instead
