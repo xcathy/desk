@@ -1043,6 +1043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151112940}
+  - component: {fileID: 151112941}
   m_Layer: 0
   m_Name: combinationLock
   m_TagString: Untagged
@@ -1059,7 +1060,7 @@ Transform:
   m_GameObject: {fileID: 151112939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0.098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1069,6 +1070,22 @@ Transform:
   - {fileID: 868249218}
   m_Father: {fileID: 1569010443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151112941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151112939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffaf447c0abab8f45af1d08aabfad322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  digitA: {fileID: 965024061}
+  digitB: {fileID: 2018694250}
+  digitC: {fileID: 819992584}
+  digitD: {fileID: 868249218}
 --- !u!4 &154556408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae0b131f3c8b13042875c77e8e7f92ac, type: 3}
@@ -2495,13 +2512,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.93457323, y: -0.17535093, z: 0.26201195, w: 0.16484755}
+  m_LocalRotation: {x: 0.90624416, y: -0.18988752, z: 0.3475597, w: 0.14787327}
   m_LocalPosition: {x: 21.42, y: 13.55, z: 25.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 23.579, y: -208.117, z: -164.73}
+  m_LocalEulerAnglesHint: {x: 23.579, y: -218.76, z: -164.73}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,8 +3330,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7460518, y: 1.7460518, z: 0.1341656}
-  m_Center: {x: -0.8730259, y: 0, z: -0.00000014528631}
+  m_Size: {x: 1.9634527, y: 1.9652109, z: 0.1341656}
+  m_Center: {x: -0.8675599, y: -0.0084299045, z: -0.00000014580273}
 --- !u!1 &664438539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4110,8 +4127,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06448457, y: 0.078552626, z: 0.0501689}
-  m_Center: {x: -0.001926304, y: 0.0059069623, z: 0.024884451}
+  m_Size: {x: 0.03213641, y: 0.04067957, z: 0.013743238}
+  m_Center: {x: 0.0022714029, y: 0.00013590387, z: 0.006671617}
 --- !u!114 &857851566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4832,6 +4849,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 961503125}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961503128}
   m_SourcePrefab: {fileID: 100100000, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
 --- !u!4 &961503123 stripped
 Transform:
@@ -4864,6 +4884,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7802028, y: 0.78020275, z: 0.18519077}
   m_Center: {x: -0.000000044703473, y: 0.00000008940697, z: 0.09259598}
+--- !u!114 &961503128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7bba74c7d4bfa44adb7897e0341a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &965024060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5336,7 +5368,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &1075946353
 MonoBehaviour:
@@ -9463,7 +9495,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!1 &1843652172
 GameObject:
