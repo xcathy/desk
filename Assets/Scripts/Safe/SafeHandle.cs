@@ -9,7 +9,7 @@ public class SafeHandle : MonoBehaviour, IObject
     public int[] passCode = new int[4];
     public Animator safeDoorAnimator;
     // private refs
-    private int[] answerCode = {6,7,8,3};
+    private int[] answerCode = {6,2,8,3};
     private Animator animator;
 
     public void Hover(){}
@@ -19,7 +19,7 @@ public class SafeHandle : MonoBehaviour, IObject
         
         if (passCode.SequenceEqual(answerCode))
         {
-            // if the passcode is 6783, open the safe
+            // if the passcode is 6283, open the safe
             DialogueUI.Instance.ShowDialogue("It opened!");
             
             // play the door open animation after the handle turn
@@ -50,6 +50,6 @@ public class SafeHandle : MonoBehaviour, IObject
         anim.SetBool(animBool, true);
 
         // Wait until the animation finishes
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(3.0f);
     }
 }
