@@ -5,28 +5,40 @@ public class DoorKnob : MonoBehaviour, IObject {
     // UI canvas refs
     // animator refs
     private Animator doorKnobAnimator;
-    // bools
-    private bool key = false;
+    // private refs
+    private int currSelected;
+    private string itemSelected;
 
-    public void Hover()
-    {
-    }
-    public void Unhover()
-    {
-    }
+    public void Hover(){}
+    public void Unhover(){}
     public void LeftClick()
     {
         // if animator is present
         if (doorKnobAnimator != null)
         {
-            // if key is not selected, attempt to turn the doorknob, fail
-            doorKnobAnimator.SetTrigger("turn");
-            DialogueUI.Instance.ShowDialogue("The door is locked.");
-
-            // if key is selected, unlock
-            if (key)
+            // get the name of the currently selected inventory item
+            currSelected = Inventory.Instance.selected;
+            if (currSelected >= 0 && currSelected < Inventory.Instance.itemList.Count)
             {
-                doorKnobAnimator.SetTrigger("unlock");
+                itemSelected = Inventory.Instance.itemList[currSelected].itemName;
+                Debug.Log("current selected item: " + itemSelected);
+
+                // if key is selected, unlock
+                if (itemSelected == "Key")
+                {
+                    doorKnobAnimator.SetTrigger("unlock");
+                    DialogueUI.Instance.ShowDialogue("I opened the door!");
+                } else
+                {
+                    // if key is not selected, attempt to turn the doorknob, fail
+                    doorKnobAnimator.SetTrigger("turn");
+                    DialogueUI.Instance.ShowDialogue("The door is locked.");
+                }
+            } else
+            {
+                // if key is not selected, attempt to turn the doorknob, fail
+                doorKnobAnimator.SetTrigger("turn");
+                DialogueUI.Instance.ShowDialogue("The door is locked.");
             }
         }
     }
@@ -34,9 +46,5 @@ public class DoorKnob : MonoBehaviour, IObject {
     void Start()
     {
         doorKnobAnimator = gameObject.GetComponent<Animator>();
-    }
-
-    void Update()
-    {
     }
 }
