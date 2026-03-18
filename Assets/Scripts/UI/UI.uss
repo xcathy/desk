@@ -396,3 +396,44 @@
     bottom: 0%;
     aspect-ratio: 2;
 }
+
+#gamewin {
+    display: none;
+}
+
+#gamewin.show {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.gameWinBtn {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 30%;
+    height: 10%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    font-size: 20px;
+    color: rgb(128, 72, 60);
+    -unity-font-style: bold;
+    position: absolute;
+}

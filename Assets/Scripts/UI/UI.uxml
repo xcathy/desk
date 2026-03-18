@@ -22,4 +22,8 @@
         <ui:Button text="RESUME" name="RESUME" class="menuBtn" style="position: relative;"/>
         <ui:Button text="EXIT" name="EXIT" class="menuBtn" style="position: relative;"/>
     </ui:VisualElement>
+    <ui:VisualElement name="gamewin" style="flex-grow: 1;">
+        <ui:Button text="Play Again?" name="AGAIN" class="gameWinBtn"/>
+        <ui:Button text="Quit" name="QUIT" class="gameWinBtn"/>
+    </ui:VisualElement>
 </ui:UXML>
