@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Linq;
 
 public class SafeHandle : MonoBehaviour, IObject
@@ -20,7 +21,9 @@ public class SafeHandle : MonoBehaviour, IObject
         {
             // if the passcode is 6783, open the safe
             DialogueUI.Instance.ShowDialogue("It opened!");
-            animator.SetBool("unlock", true);
+            
+            // play the door open animation after the handle turn
+            StartCoroutine(WaitForAnimation(animator, "unlock"));
             safeDoorAnimator.SetBool("unlock", true);
         } else
         {
@@ -40,5 +43,13 @@ public class SafeHandle : MonoBehaviour, IObject
     {
         Instance = this;
         animator = gameObject.GetComponent<Animator>();
+    }
+
+    IEnumerator WaitForAnimation(Animator anim, string animBool)
+    {
+        anim.SetBool(animBool, true);
+
+        // Wait until the animation finishes
+        yield return new WaitForSeconds(2.0f);
     }
 }
