@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
+    // Instancing
+    public static MenuUI Instance { get; private set; }
     // public refs
     public UIDocument UIDoc;
     // private refs
@@ -17,9 +19,12 @@ public class MenuUI : MonoBehaviour
     private bool startover;
     private bool resume;
     private bool exit;
+    private bool won;
 
     void Start()
     {
+        // Instancing
+        Instance = this;
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
         menu = root.Q<VisualElement>("menu");
@@ -30,6 +35,8 @@ public class MenuUI : MonoBehaviour
 
         // default hide the menu and dialogue box
         menu.RemoveFromClassList("show");
+        // default won to be false
+        won = false;
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();
@@ -37,10 +44,10 @@ public class MenuUI : MonoBehaviour
         exitBtn.clicked += () => Exit();
     }
 
-     void Update()
+    void Update()
     {
         // if ESC is pressed, show the menu
-        if (Input.GetKey(KeyCode.Escape)) {
+        if (Input.GetKey(KeyCode.Escape) && !won) {
             Menu();
         }
     }
@@ -71,5 +78,9 @@ public class MenuUI : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
+    }
+    public void SetWon()
+    {
+        won = true;
     }
 }

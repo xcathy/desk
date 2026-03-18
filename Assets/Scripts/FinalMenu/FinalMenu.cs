@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FinalMenu : MonoBehaviour
+public class GameWin : MonoBehaviour
 {
     // public refs
     public Rigidbody playerRB;
@@ -10,6 +10,7 @@ public class FinalMenu : MonoBehaviour
     void OnTriggerEnter()
     {
         GameWinUI.Instance.GameWin();
+        MenuUI.Instance.SetWon();
         FreezePlayer();
     }
 
