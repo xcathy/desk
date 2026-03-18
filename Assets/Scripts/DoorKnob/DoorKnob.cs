@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class DoorKnob : MonoBehaviour, IObject {
 
-    // UI canvas refs
+    // public refs
+    public Animator doorAnimator;
     // animator refs
     private Animator doorKnobAnimator;
     // private refs
@@ -27,6 +28,7 @@ public class DoorKnob : MonoBehaviour, IObject {
                 if (itemSelected == "Key")
                 {
                     doorKnobAnimator.SetTrigger("unlock");
+                    doorAnimator.SetTrigger("unlock");
                     DialogueUI.Instance.ShowDialogue("I opened the door!");
                 } else
                 {
