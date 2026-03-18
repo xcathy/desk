@@ -202,6 +202,7 @@
 #menu {
     display: none;
 }
+
 #menu.show {
     display: flex;
     top: 0%;
@@ -240,6 +241,11 @@
 }
 
 #dialogue {
+    display: none;
+}
+
+#dialogue.show {
+    display: flex;
     position: absolute;
     bottom: 0%;
     align-items: center;
@@ -417,7 +423,6 @@
     align-self: center;
     align-content: center;
     flex-direction: row;
-    background-color: rgba(250, 183, 188, 0.59);
 }
 
 .gameWinBtn {

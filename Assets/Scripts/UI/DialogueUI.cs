@@ -24,7 +24,7 @@ public class DialogueUI : MonoBehaviour
         text = root.Q<Label>("text");
 
         // default hide the dialogue box
-        dialogue.style.display = DisplayStyle.None;
+        dialogue.RemoveFromClassList("show");
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class DialogueUI : MonoBehaviour
     // Dialogue display
     public void ShowDialogue(string textContent, float delay = 0.05f)
     {
-        dialogue.style.display = DisplayStyle.Flex;
+        dialogue.AddToClassList("show");
         // stop previous typing
         StopAllCoroutines();
         // start new typing
@@ -47,7 +47,7 @@ public class DialogueUI : MonoBehaviour
 
     public void HideDialogue()
     {
-        dialogue.style.display = DisplayStyle.None;
+        dialogue.RemoveFromClassList("show");
     }
 
     // text typing method
