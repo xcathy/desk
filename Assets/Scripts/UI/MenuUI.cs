@@ -19,7 +19,7 @@ public class MenuUI : MonoBehaviour
     private bool startover;
     private bool resume;
     private bool exit;
-    private bool won;
+    private bool enable;
 
     void Start()
     {
@@ -35,8 +35,8 @@ public class MenuUI : MonoBehaviour
 
         // default hide the menu and dialogue box
         menu.RemoveFromClassList("show");
-        // default won to be false
-        won = false;
+        // default enable to be true
+        enable = true;
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();
@@ -47,7 +47,7 @@ public class MenuUI : MonoBehaviour
     void Update()
     {
         // if ESC is pressed, show the menu
-        if (Input.GetKey(KeyCode.Escape) && !won) {
+        if (Input.GetKey(KeyCode.Escape) && enable) {
             Menu();
         }
     }
@@ -79,8 +79,8 @@ public class MenuUI : MonoBehaviour
         // force stop the game
         Application.Quit();
     }
-    public void SetWon()
+    public void SetEnable(bool status)
     {
-        won = true;
+        enable = status;
     }
 }

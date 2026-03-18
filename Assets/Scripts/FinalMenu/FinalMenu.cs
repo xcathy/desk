@@ -10,7 +10,7 @@ public class GameWin : MonoBehaviour
     void OnTriggerEnter()
     {
         GameWinUI.Instance.GameWin();
-        MenuUI.Instance.SetWon();
+        MenuUI.Instance.SetEnable(false);
         FreezePlayer();
     }
 
