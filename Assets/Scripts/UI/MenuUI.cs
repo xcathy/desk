@@ -29,7 +29,7 @@ public class MenuUI : MonoBehaviour
         exitBtn = menu.Q<Button>("EXIT");
 
         // default hide the menu and dialogue box
-        menu.style.display = DisplayStyle.None;
+        menu.RemoveFromClassList("show");
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();
@@ -46,7 +46,7 @@ public class MenuUI : MonoBehaviour
     }
     public void Menu()
     {
-        menu.style.display = DisplayStyle.Flex;
+        menu.AddToClassList("show");
         // show the mouse
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
@@ -63,7 +63,7 @@ public class MenuUI : MonoBehaviour
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
         // hide the menu
-        menu.style.display = DisplayStyle.None;
+        menu.RemoveFromClassList("show");
     }
     void Exit()
     {

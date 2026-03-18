@@ -21,13 +21,13 @@ public class GameWinUI : MonoBehaviour
         root = UIDoc.rootVisualElement;
         gameWinMenu = root.Q<VisualElement>("gamewin");
 
-        // default hide the dialogue box
-        gameWinMenu.style.display = DisplayStyle.None;
+        // default hide the game win menu
+        gameWinMenu.RemoveFromClassList("show");
     }
 
     // display game win menu
     public void GameWin()
     {
-        gameWinMenu.style.display = DisplayStyle.Flex;
+        gameWinMenu.AddToClassList("show");
     }
 }
