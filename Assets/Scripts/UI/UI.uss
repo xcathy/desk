@@ -8,7 +8,33 @@
     align-self: center;
     align-content: center;
 }
-/*Inventory USS*/
+
+#cursorBox {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+
+#cursor {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 3px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 270px;
+    border-top-right-radius: 270px;
+    border-bottom-right-radius: 270px;
+    border-bottom-left-radius: 270px;
+}
+
 #items {
     position: absolute;
     top: -20%;
@@ -90,7 +116,8 @@
     background-color: rgb(51, 51, 51);
 }
 
-#slot0 {}
+#slot0 {
+}
 
 #slot0.selected {
     border-left-color: rgb(255, 255, 255);
@@ -107,7 +134,8 @@
     border-bottom-left-radius: 11px;
 }
 
-#slot1 {}
+#slot1 {
+}
 
 #slot1.selected {
     border-left-color: rgb(255, 255, 255);
@@ -124,7 +152,8 @@
     border-bottom-left-radius: 11px;
 }
 
-#slot2 {}
+#slot2 {
+}
 
 #slot2.selected {
     border-left-color: rgb(255, 255, 255);
@@ -141,7 +170,8 @@
     border-bottom-left-radius: 11px;
 }
 
-#slot3 {}
+#slot3 {
+}
 
 #slot3.selected {
     border-left-color: rgb(255, 255, 255);
@@ -158,7 +188,8 @@
     border-bottom-left-radius: 11px;
 }
 
-#slot4 {}
+#slot4 {
+}
 
 #slot4.selected {
     border-left-color: rgb(255, 255, 255);
@@ -175,7 +206,8 @@
     border-bottom-left-radius: 11px;
 }
 
-#slot5 {}
+#slot5 {
+}
 
 #slot5.selected {
     border-left-color: rgb(255, 255, 255);
@@ -192,7 +224,6 @@
     border-bottom-left-radius: 11px;
 }
 
-/*Main Menu USS*/
 #menu {
     display: none;
 }
@@ -234,7 +265,6 @@
     margin-left: 5%;
 }
 
-/*Dialogue USS*/
 #dialogue {
     display: none;
 }
@@ -362,7 +392,6 @@
     margin-left: 3%;
 }
 
-/*Preview Mode USS*/
 #previewMode {
     display: none;
     position: absolute;
@@ -470,7 +499,6 @@
     position: absolute;
 }
 
-/*Game Win USS*/
 #gamewin {
     display: none;
 }

@@ -1,5 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Scripts/UI/UI.uss?fileID=7433441132597879392&amp;guid=6dbd89e1e12fcc444a756fa9b2a5ff9c&amp;type=3#UI"/>
+    <ui:VisualElement name="cursorBox" style="flex-grow: 1;">
+        <ui:Image name="cursor"/>
+    </ui:VisualElement>
     <ui:VisualElement name="items" style="flex-grow: 1; display: flex;">
         <ui:Image name="slot0" class="slot" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=5866165431930342980&amp;guid=8e224a1ed032b7f4b926e3306804102e&amp;type=3#Remove@2x&quot;); background-color: rgb(51, 51, 51);"/>
         <ui:Image name="slot1" class="slot" style="background-image: none;"/>
