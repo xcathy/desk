@@ -394,18 +394,6 @@
 
 #previewMode {
     display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    width: 100%;
-    height: 100%;
 }
 
 #previewMode.show {
@@ -497,6 +485,44 @@
     height: 20%;
     flex-wrap: nowrap;
     position: absolute;
+}
+
+#howTo {
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1.5;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+#drag {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    -unity-text-align: middle-center;
+}
+
+#tab {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    font-size: 12px;
 }
 
 #gamewin {
