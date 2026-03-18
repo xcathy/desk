@@ -15,10 +15,12 @@
             <ui:Image name="space" source="project://database/Assets/Sprites/UI/space.png?fileID=21300000&amp;guid=08f74730f5dedc049926c77b9e9d10b4&amp;type=3#space"/>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="previewBG"/>
-    <ui:VisualElement name="preview" style="flex-grow: 1;"/>
-    <ui:Label name="itemDesc"/>
-    <ui:Label name="itemName"/>
+    <ui:VisualElement name="previewMode" style="flex-grow: 1;">
+        <ui:VisualElement name="previewBG" style="position: absolute;"/>
+        <ui:VisualElement name="preview" style="flex-grow: 1;"/>
+        <ui:Label name="itemDesc"/>
+        <ui:Label name="itemName"/>
+    </ui:VisualElement>
     <ui:VisualElement name="menu" style="flex-grow: 1; width: 30%;">
         <ui:Button text="STARTOVER" name="STARTOVER" class="menuBtn" style="position: relative;"/>
         <ui:Button text="RESUME" name="RESUME" class="menuBtn" style="position: relative;"/>

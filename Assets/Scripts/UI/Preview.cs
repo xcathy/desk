@@ -10,12 +10,12 @@ public class Preview : MonoBehaviour
 
     // private refs
     private VisualElement root;
-    private VisualElement previewBG;
+    private VisualElement previewMode;
     private VisualElement preview;
     private Label title;
     private Label desc;
     // private bools
-    private bool previewMode = false;
+    private bool previewModeOn = false;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Preview : MonoBehaviour
         Instance = this;
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
-        previewBG = root.Q<VisualElement>("previewBG");
+        previewMode = root.Q<VisualElement>("previewMode");
         preview = root.Q<VisualElement>("preview");
         title = root.Q<Label>("itemName");
         desc = root.Q<Label>("itemDesc");
@@ -33,10 +33,10 @@ public class Preview : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab)) {
-            previewMode = !previewMode;
+            previewModeOn = !previewModeOn;
         }
 
-        if (previewMode) 
+        if (previewModeOn) 
         { 
             ShowPreview();
         } else
@@ -46,17 +46,11 @@ public class Preview : MonoBehaviour
     }
     void ShowPreview()
     {
-        previewBG.AddToClassList("show");
-        preview.AddToClassList("show");
-        title.AddToClassList("show");
-        desc.AddToClassList("show");
+        previewMode.AddToClassList("show");
     }
     void HidePreview()
     {
-        previewBG.RemoveFromClassList("show");
-        preview.RemoveFromClassList("show");
-        title.RemoveFromClassList("show");
-        desc.RemoveFromClassList("show");
+        previewMode.RemoveFromClassList("show");
     }
 
     public void SetTitle(string titleText)
