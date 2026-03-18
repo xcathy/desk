@@ -85,6 +85,8 @@ public class InventoryUI : MonoBehaviour
             if (currSelected > 0 && currSelected < Inventory.Instance.itemList.Count)
             {
                 Inventory.Instance.SetPreview(Inventory.Instance.itemList[currSelected].itemName);
+                Preview.Instance.SetTitle(Inventory.Instance.itemList[currSelected].itemName);
+                Preview.Instance.SetDesc(Inventory.Instance.itemList[currSelected].description);
             } else
             {
                 Inventory.Instance.UnSetPreview();

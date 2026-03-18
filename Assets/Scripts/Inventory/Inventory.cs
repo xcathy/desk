@@ -26,6 +26,8 @@ public class Inventory : MonoBehaviour
         InventoryUI.Instance.HightlightSlot(selected);
 
         SetPreview(item.itemName);
+        Preview.Instance.SetTitle(item.itemName);
+        Preview.Instance.SetDesc(item.description);
     }
 
     // set the preview of the selected item to active
