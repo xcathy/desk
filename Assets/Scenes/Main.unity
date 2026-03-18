@@ -267,6 +267,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d3e5978aae892f4792b6eab572591f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 33896984}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d3e5978aae892f4792b6eab572591f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 33896986}
   m_SourcePrefab: {fileID: 100100000, guid: 2d3e5978aae892f4792b6eab572591f8, type: 3}
 --- !u!4 &33896982 stripped
 Transform:
@@ -326,6 +329,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.003812017, y: 0.007838294, z: 0.001034464}
   m_Center: {x: -0.00002696508, y: -0.0019218435, z: 0.00013051512}
+--- !u!114 &33896986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33896983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb660d1316cb2ab4c84c0e6d7294f922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
+  hintCanvas: {fileID: 0}
+  item: {fileID: 11400000, guid: 76391889f5690dc478ce721c9778fdfc, type: 2}
 --- !u!1 &58610097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d8c17cbf9de906744a736f19da15ac23, type: 3}
@@ -8649,11 +8666,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1567853578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707d38f455f7e7c46aa0af5faf595e8b, type: 3}
+  m_Script: {fileID: 11500000, guid: bb660d1316cb2ab4c84c0e6d7294f922, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Plushie
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
   hintCanvas: {fileID: 1608218210}
-  plushie: {fileID: 11400000, guid: 7bddf0c7b20a3c94385f605aa54914dc, type: 2}
+  item: {fileID: 11400000, guid: 7bddf0c7b20a3c94385f605aa54914dc, type: 2}
 --- !u!1001 &1569010442
 PrefabInstance:
   m_ObjectHideFlags: 0

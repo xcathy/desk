@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Plushie : MonoBehaviour, IObject
+public class PickUp : MonoBehaviour, IObject
 {
     // UI canvas refs
     public GameObject hintCanvas;
     // ItemData refs
-    public ItemData plushie;
+    public ItemData item;
     // bools
     public void Hover()
     {
@@ -23,9 +23,7 @@ public class Plushie : MonoBehaviour, IObject
     {
         // shows dialogue when clicked
         gameObject.SetActive(false);
-        Inventory.Instance.Add(plushie);
+        Inventory.Instance.Add(item);
         InventoryUI.Instance.ShowInventory();
     }
 }
-
-
