@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Preview : MonoBehaviour
+public class PreviewUI : MonoBehaviour
 {
-    public static Preview Instance { get; private set; }
+    public static PreviewUI Instance { get; private set; }
     // public refs
     public UIDocument UIDoc;
     public RenderTexture previewRT;
