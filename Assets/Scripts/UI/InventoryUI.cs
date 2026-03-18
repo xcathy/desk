@@ -13,6 +13,7 @@ public class InventoryUI : MonoBehaviour
     private VisualElement items;
     private Image[] slots;
     private float scroll;
+    private bool enable;
 
     // timer
     private float inventoryTimer = 0f;
@@ -22,7 +23,8 @@ public class InventoryUI : MonoBehaviour
     {
         // Instancing
         Instance = this;
-
+        // default enable
+        enable = true;
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
         items = root.Q<VisualElement>("items");
@@ -115,7 +117,10 @@ public class InventoryUI : MonoBehaviour
     // Inventory display
     public void ShowInventory()
     {
-        items.AddToClassList("show");
+        if (enable)
+        {
+            items.AddToClassList("show");
+        }
         // set show inventory timer to 0
         inventoryTimer = 0f;
     }
@@ -127,5 +132,10 @@ public class InventoryUI : MonoBehaviour
     public void ChangeImg(int slotNum, Texture2D img)
     {
         slots[slotNum].style.backgroundImage = img;
+    }
+
+    public void SetEnable(bool status)
+    {
+        enable = status;
     }
 }

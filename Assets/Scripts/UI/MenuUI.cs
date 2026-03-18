@@ -25,6 +25,8 @@ public class MenuUI : MonoBehaviour
     {
         // Instancing
         Instance = this;
+        // default enable to be true
+        enable = true;
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
         menu = root.Q<VisualElement>("menu");
@@ -35,8 +37,6 @@ public class MenuUI : MonoBehaviour
 
         // default hide the menu and dialogue box
         menu.RemoveFromClassList("show");
-        // default enable to be true
-        enable = true;
 
         // adding the button event listeners
         startoverBtn.clicked += () => StartOver();

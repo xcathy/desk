@@ -16,11 +16,14 @@ public class PreviewUI : MonoBehaviour
     private Label desc;
     // private bools
     private bool previewModeOn = false;
+    private bool enable;
 
     void Start()
     {
         // Instancing
         Instance = this;
+        // default enable
+        enable = true;
         // referencing the UI elements
         root = UIDoc.rootVisualElement;
         previewMode = root.Q<VisualElement>("previewMode");
@@ -46,7 +49,7 @@ public class PreviewUI : MonoBehaviour
     }
     void ShowPreview()
     {
-        previewMode.AddToClassList("show");
+        if (enable) previewMode.AddToClassList("show");
     }
     void HidePreview()
     {
@@ -61,5 +64,10 @@ public class PreviewUI : MonoBehaviour
     public void SetDesc(string descText)
     {
         desc.text = descText;
+    }
+
+    public void SetEnable(bool status)
+    {
+        enable = status;
     }
 }

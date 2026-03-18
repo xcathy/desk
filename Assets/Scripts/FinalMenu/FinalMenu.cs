@@ -11,6 +11,8 @@ public class GameWin : MonoBehaviour
     {
         GameWinUI.Instance.GameWin();
         MenuUI.Instance.SetEnable(false);
+        InventoryUI.Instance.SetEnable(false);
+        PreviewUI.Instance.SetEnable(false);
         FreezePlayer();
     }
 
