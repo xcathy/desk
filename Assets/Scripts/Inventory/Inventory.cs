@@ -14,7 +14,6 @@ public class Inventory : MonoBehaviour
     public void Add(ItemData item)
     {
         itemList.Add(item);
-        Debug.Log("Added " + item.itemName);
     
         // remove the currently selected
         InventoryUI.Instance.UnHightlightSlot(selected);
@@ -62,11 +61,5 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         Instance = this;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

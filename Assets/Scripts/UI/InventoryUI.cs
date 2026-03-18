@@ -90,6 +90,8 @@ public class InventoryUI : MonoBehaviour
             } else
             {
                 Inventory.Instance.UnSetPreview();
+                Preview.Instance.SetTitle("");
+                Preview.Instance.SetDesc("");
             }
         }
         

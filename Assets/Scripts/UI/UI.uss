@@ -407,6 +407,57 @@
     aspect-ratio: 2;
 }
 
+#itemName {
+    display: none;
+}
+
+#itemName.show {
+    display: flex;
+    top: 0%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: 60%;
+    height: 40px;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    text-overflow: clip;
+}
+
+#itemDesc {
+    display: none;
+}
+
+#itemDesc.show {
+    display: flex;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    height: 20%;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+
 #gamewin {
     display: none;
 }
@@ -444,56 +495,4 @@
     color: rgb(128, 72, 60);
     -unity-font-style: bold;
     position: relative;
-}
-
-#itemName {
-    display: none;
-}
-
-#itemName.show {
-    display: flex;
-    top: 0%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    width: 60%;
-    height: 40px;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    -unity-text-align: middle-center;
-    white-space: pre-wrap;
-    text-overflow: clip;
-    -unity-font-style: bold;
-}
-
-#itemDesc {
-    display: none;
-}
-
-#itemDesc.show {
-    display: flex;
-    bottom: 0%;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    -unity-text-align: middle-center;
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    width: 60%;
-    height: 20%;
-    flex-wrap: nowrap;
-    position: absolute;
 }

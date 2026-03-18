@@ -61,7 +61,6 @@ public class Preview : MonoBehaviour
 
     public void SetTitle(string titleText)
     {
-        Debug.Log("setting title to: " + titleText);
         title.text = titleText;
     }
 
