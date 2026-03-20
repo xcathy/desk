@@ -1046,22 +1046,54 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d545f6d7d97c8f843844f8448919f96d, type: 2}
+    - target: {fileID: -3576886063962428599, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -542745725295482171, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -215257275302936330, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 14842a4868d20fa458143c060b02184e, type: 2}
+    - target: {fileID: 747804555106506715, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: m_Name
       value: wallS
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069853852184811513, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2841196111598706980, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 38b9d938541d97a43bc1d59053fa6e2e, type: 2}
+    - target: {fileID: 2864958478993699223, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2950704451824010302, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 38b9d938541d97a43bc1d59053fa6e2e, type: 2}
+    - target: {fileID: 4824053906829402908, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6170369668575020088, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6194789411272516331, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1070,6 +1102,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 14842a4868d20fa458143c060b02184e, type: 2}
+    - target: {fileID: 7742688424583955844, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8101904436840686079, guid: d72c31ba0fd2a2b43bee1d2f88bb755d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1805,7 +1841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280778482}
   - component: {fileID: 280778483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: safeFloorWallLCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2221,7 +2257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362358507}
   - component: {fileID: 362358508}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wallNcolliderUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2910,6 +2946,10 @@ PrefabInstance:
       value: ceiling
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d6431a48b68fa84ea7c5f4447ab5cab, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d6431a48b68fa84ea7c5f4447ab5cab, type: 3}
       propertyPath: m_TagString
       value: ceiling
       objectReference: {fileID: 0}
@@ -3565,6 +3605,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8f2647825f3e17947b7c88cc462150ca, type: 3}
       propertyPath: m_Name
       value: safe_door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f2647825f3e17947b7c88cc462150ca, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4267,6 +4311,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 26726b21822d4d549a2f75d740388cb4, type: 2}
+    - target: {fileID: -5743350618785959237, guid: ef5198b9fe8f7424ab90d492ff98d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -450435477336378351, guid: ef5198b9fe8f7424ab90d492ff98d1a0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -4282,6 +4330,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef5198b9fe8f7424ab90d492ff98d1a0, type: 3}
       propertyPath: m_Name
       value: bedroom_light
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef5198b9fe8f7424ab90d492ff98d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4368,6 +4420,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
       propertyPath: m_Name
       value: digitC
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4700,6 +4756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: digitD
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4777,7 +4837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889916848}
   - component: {fileID: 889916849}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: safeFloorWallBCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5346,6 +5406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: safe_handle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93084aa3c7276704b93a43871216acb4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5494,6 +5558,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
       propertyPath: m_Name
       value: digitA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5858,7 +5926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033060685}
   - component: {fileID: 1033060686}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: safeFloorCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5911,7 +5979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072857089}
   - component: {fileID: 1072857090}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wallNcolliderL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6295,6 +6363,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4e6383750101f7b40b11a32313fc3f55, type: 3}
       propertyPath: m_Name
       value: wallW
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4e6383750101f7b40b11a32313fc3f55, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7119,7 +7191,7 @@ GameObject:
   - component: {fileID: 1280876663}
   - component: {fileID: 1280876665}
   - component: {fileID: 1280876664}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bedroom_lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7325,7 +7397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322384217}
   - component: {fileID: 1322384218}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wallNcolliderR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8397,7 +8469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482739030}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ceiling_set
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10004,7 +10076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691689987}
   - component: {fileID: 1691689988}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: safeFloorWallRCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11656,7 +11728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987804990}
   - component: {fileID: 1987804991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: safeCeilingCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11771,6 +11843,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
       propertyPath: m_Name
       value: digitB
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 195b10a97ce96d14fb41db8a181e2a28, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11919,6 +11995,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a7f09b9720768a04988ce5a6d4ef4e7f, type: 3}
       propertyPath: m_Name
       value: wallN
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7f09b9720768a04988ce5a6d4ef4e7f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12642,6 +12722,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 38b9d938541d97a43bc1d59053fa6e2e, type: 2}
+    - target: {fileID: -2894737362787851018, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2668636609597471051, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -485190468514841237, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -12649,6 +12737,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
       propertyPath: m_Name
       value: wallE
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453416433829550203, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492538172147164842, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3836234344256605837, guid: dde6db2f1c14aee4984414c416b68c83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
