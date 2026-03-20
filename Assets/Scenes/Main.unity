@@ -199,7 +199,7 @@ PrefabInstance:
       addedObject: {fileID: 33896984}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d3e5978aae892f4792b6eab572591f8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 33896986}
+      addedObject: {fileID: 33896989}
   m_SourcePrefab: {fileID: 100100000, guid: 2d3e5978aae892f4792b6eab572591f8, type: 3}
 --- !u!4 &33896982 stripped
 Transform:
@@ -259,7 +259,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0067851627, y: 0.007838293, z: 0.0050191297}
   m_Center: {x: 0.000073820345, y: -0.0019218434, z: 0.0021228539}
---- !u!114 &33896986
+--- !u!114 &33896989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,11 +268,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 33896983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb660d1316cb2ab4c84c0e6d7294f922, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f8f20e40a455724281834af00bc8983, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  hintCanvas: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Key
   item: {fileID: 11400000, guid: 76391889f5690dc478ce721c9778fdfc, type: 2}
+  safeDoorAnimator: {fileID: 663670851}
 --- !u!1 &58610097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d8c17cbf9de906744a736f19da15ac23, type: 3}
@@ -5469,6 +5469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   passCode: 00000000000000000000000000000000
   safeDoorAnimator: {fileID: 663670851}
+  key: {fileID: 33896983}
 --- !u!95 &961503129
 Animator:
   serializedVersion: 7

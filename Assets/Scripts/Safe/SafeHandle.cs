@@ -8,6 +8,7 @@ public class SafeHandle : MonoBehaviour, IObject
     // public refs
     public int[] passCode = new int[4];
     public Animator safeDoorAnimator;
+    public GameObject key;
     // private refs
     private int[] answerCode = {6,2,8,3};
     private Animator animator;
@@ -16,22 +17,29 @@ public class SafeHandle : MonoBehaviour, IObject
     public void Unhover(){}
     public void LeftClick()
     {
-        
-        if (passCode.SequenceEqual(answerCode))
+        // if the key is still not picked up yet, attempt to open the safe
+        if (key.activeSelf == true)
         {
-            // if the passcode is 6283, open the safe
-            DialogueUI.Instance.ShowDialogue("It opened!");
-            
-            // play the door open animation after the handle turn
-            StartCoroutine(WaitForAnimation(animator, "unlock"));
-            safeDoorAnimator.SetBool("unlock", true);
+            if (passCode.SequenceEqual(answerCode))
+            {
+                // if the passcode is 6283, open the safe
+                DialogueUI.Instance.ShowDialogue("It opened!");
+                
+                // play the door open animation after the handle turn
+                StartCoroutine(WaitForAnimation(animator, "unlock"));
+                safeDoorAnimator.SetBool("unlock", true);
+            } else
+            {
+                // otherwise, display dialogue instead
+                DialogueUI.Instance.ShowDialogue("The handle won't turn, seems like " +
+                    passCode[0] + passCode[1] + passCode[2] + passCode[3]
+                    + " is not the correct passcode.");
+            }
         } else
         {
-            // otherwise, display dialogue instead
-            DialogueUI.Instance.ShowDialogue("The handle won't turn, seems like " +
-                passCode[0] + passCode[1] + passCode[2] + passCode[3]
-                + " is not the correct passcode.");
+            DialogueUI.Instance.ShowDialogue("I already got the key.");
         }
+       
     }
     
     public void SetDigit(int index, int codeNum)
