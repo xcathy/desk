@@ -4,34 +4,17 @@ public class Closet : MonoBehaviour, IObject
 {
     // UI canvas refs
     public GameObject hintCanvas;
-    // public transform refs
-    public Transform doorL;
-    public Transform doorR;
     // animator refs
-    private Animator doorLAnimator;
-    private Animator doorRAnimator;
+    public Animator doorLAnimator;
+    public Animator doorRAnimator;
+    public Animator safeDoorAnimator;
 
-    public void Hover()
-    {
-        if (hintCanvas!= null) {
-            hintCanvas.SetActive(true);
-        }
-    }
-    public void Unhover()
-    {
-        if (hintCanvas!= null) {
-            hintCanvas.SetActive(false);
-        }
-    }
+    public void Hover(){}
+    public void Unhover(){}
     public void LeftClick()
     {
         doorLAnimator.SetBool("open", false);
         doorRAnimator.SetBool("open", false);
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        doorLAnimator = doorL.GetComponent<Animator>();
-        doorRAnimator = doorR.GetComponent<Animator>();
+        safeDoorAnimator.SetBool("unlock", false);
     }
 }

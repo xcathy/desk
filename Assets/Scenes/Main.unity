@@ -4353,6 +4353,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 68377a2fb0259b54481492e5a7d0f589, type: 3}
   m_PrefabInstance: {fileID: 278939033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &812323153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890106362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6997624d3cb21254ca4adf64924ce4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Closet
+  hintCanvas: {fileID: 0}
+  doorLAnimator: {fileID: 1886235953}
+  doorRAnimator: {fileID: 84829225}
+  safeDoorAnimator: {fileID: 663670851}
 --- !u!1001 &819992583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11230,6 +11246,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b028696e22aae754db8d72227df64d8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1890106365}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b028696e22aae754db8d72227df64d8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 812323153}
     - targetCorrespondingSourceObject: {fileID: 6470693377105354767, guid: b028696e22aae754db8d72227df64d8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1890106364}
