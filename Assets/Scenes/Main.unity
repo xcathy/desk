@@ -360,23 +360,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.013292954, y: 0.002383384, z: 0.028998982}
   m_Center: {x: 0.00664648, y: -0.00073007494, z: 9.313226e-10}
---- !u!114 &84829224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84829219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
-  hintCanvas: {fileID: 0}
-  animator: {fileID: 84829225}
-  boolName: open
-  lighting: {fileID: 0}
-  intensity: 0
 --- !u!95 &84829225
 Animator:
   serializedVersion: 7
@@ -399,6 +382,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &84829228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84829219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f74391203909489b63cf0a87c815a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  safeDoorAnimator: {fileID: 663670851}
 --- !u!1001 &110530801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4365,7 +4361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6997624d3cb21254ca4adf64924ce4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Closet
-  hintCanvas: {fileID: 0}
   doorLAnimator: {fileID: 1886235953}
   doorRAnimator: {fileID: 84829225}
   safeDoorAnimator: {fileID: 663670851}
@@ -5844,7 +5839,7 @@ PrefabInstance:
       addedObject: {fileID: 84829221}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62a4e53325210584a867a01305a6abf3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 84829224}
+      addedObject: {fileID: 84829228}
   m_SourcePrefab: {fileID: 100100000, guid: 62a4e53325210584a867a01305a6abf3, type: 3}
 --- !u!1001 &1003301870
 PrefabInstance:
@@ -11076,7 +11071,7 @@ PrefabInstance:
       addedObject: {fileID: 1886235953}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: baec617cc8c89f24bb46baad28cdf331, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1886235952}
+      addedObject: {fileID: 1886235956}
   m_SourcePrefab: {fileID: 100100000, guid: baec617cc8c89f24bb46baad28cdf331, type: 3}
 --- !u!1 &1886235947 stripped
 GameObject:
@@ -11109,23 +11104,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.013292953, y: 0.0023833804, z: 0.02899898}
   m_Center: {x: -0.0066464767, y: -0.0007300779, z: 0.0000000018626451}
---- !u!114 &1886235952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886235947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
-  hintCanvas: {fileID: 0}
-  animator: {fileID: 1886235953}
-  boolName: open
-  lighting: {fileID: 0}
-  intensity: 0
 --- !u!95 &1886235953
 Animator:
   serializedVersion: 7
@@ -11148,6 +11126,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1886235956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886235947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e83a2db6fcedbb42a8f6374279ca889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  safeDoorAnimator: {fileID: 663670851}
 --- !u!1001 &1890106358
 PrefabInstance:
   m_ObjectHideFlags: 0

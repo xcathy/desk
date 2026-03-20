@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Closet : MonoBehaviour, IObject
 {
-    // UI canvas refs
-    public GameObject hintCanvas;
     // animator refs
     public Animator doorLAnimator;
     public Animator doorRAnimator;
