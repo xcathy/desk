@@ -1407,13 +1407,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba0f23e4462a11e428c2f698f989da11, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba0f23e4462a11e428c2f698f989da11, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 232542114}
+      addedObject: {fileID: 232542117}
   m_SourcePrefab: {fileID: 100100000, guid: ba0f23e4462a11e428c2f698f989da11, type: 3}
 --- !u!4 &232542112 stripped
 Transform:
@@ -1425,7 +1429,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba0f23e4462a11e428c2f698f989da11, type: 3}
   m_PrefabInstance: {fileID: 232542111}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &232542114
+--- !u!65 &232542117
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2137,7 +2141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   Cam: {fileID: 330585546}
-  range: 10
+  range: 20
 --- !u!1001 &330879868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6628,7 +6632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6680,10 +6684,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1356070034}
+      addedObject: {fileID: 1356070028}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1356070028}
+      addedObject: {fileID: 1356070040}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d911a5680c539964eb7e81a6df8a8a96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1356070032}
@@ -7571,7 +7575,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &1356070032
 Animator:
@@ -7595,7 +7599,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &1356070034
+--- !u!114 &1356070037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356070024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
+  hintCanvas: {fileID: 0}
+  animator: {fileID: 1356070032}
+  boolName: move
+  lighting: {fileID: 0}
+  intensity: 0
+--- !u!65 &1356070040
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7614,25 +7635,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02011985, y: 0.018820744, z: 0.00029332374}
-  m_Center: {x: 0.00068053947, y: 1.2876674e-11, z: 0.00015261928}
---- !u!114 &1356070037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356070024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f32c6b5a44c7b4c96ab236afe96f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjInteract
-  hintCanvas: {fileID: 0}
-  animator: {fileID: 1356070032}
-  boolName: move
-  lighting: {fileID: 0}
-  intensity: 0
+  m_Size: {x: 0.020119848, y: 0.018820746, z: 0.00048073847}
+  m_Center: {x: 0.000680539, y: 2.1368354e-12, z: 0.0002463267}
 --- !u!4 &1362055364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4050295581307752939, guid: 0d83ac80328d079419797a156e3cf39f, type: 3}

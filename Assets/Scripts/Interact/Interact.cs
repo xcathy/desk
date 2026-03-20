@@ -28,6 +28,12 @@ public class Interact : MonoBehaviour
         if (Physics.Raycast(r, out RaycastHit hit, range))
         {
             //Debug.Log("raycast hit: " + hit.collider.name);
+            // disable raycast hits on ignore raycast layer
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast"))
+            {
+                return;
+            }
+
             var obj = hit.collider.GetComponentInParent<IObject>();
             if (obj != null)
             {
