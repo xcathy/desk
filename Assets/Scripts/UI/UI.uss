@@ -344,7 +344,7 @@
     position: relative;
     aspect-ratio: 1;
     flex-basis: auto;
-    background-image: url("project://database/Assets/Sprites/UI/icon1%201.png?fileID=2800000&guid=138d55955b67e4f4a99fa96848fe6f2f&type=3#icon1 1");
+    background-image: url("project://database/Assets/Sprites/UI/profileIcon.jpg?fileID=2800000&guid=ab91f5ee1aebbb4428627ed4bd845dcd&type=3#profileIcon");
     border-top-left-radius: 69px;
     border-top-right-radius: 69px;
     border-bottom-right-radius: 69px;

@@ -75,7 +75,7 @@ public class MenuUI : MonoBehaviour
     void Exit()
     {
         // force stop unity editor
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
     }

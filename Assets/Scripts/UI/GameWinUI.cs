@@ -55,7 +55,7 @@ public class GameWinUI : MonoBehaviour
     void Quit()
     {
         // force stop unity editor
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
     }
