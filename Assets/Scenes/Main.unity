@@ -11304,6 +11304,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -22.471
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8f75bf97980f23e40bf42cfd4261c9be, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 14842a4868d20fa458143c060b02184e, type: 2}
+    - target: {fileID: -460041840332862433, guid: 8f75bf97980f23e40bf42cfd4261c9be, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 26726b21822d4d549a2f75d740388cb4, type: 2}
     - target: {fileID: 919132149155446097, guid: 8f75bf97980f23e40bf42cfd4261c9be, type: 3}
       propertyPath: m_Name
       value: chair
