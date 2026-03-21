@@ -41,6 +41,7 @@ public class GameWinUI : MonoBehaviour
     // display game win menu
     public void GameWin()
     {
+        Debug.Log("displaying game win");
         gameWinMenu.AddToClassList("show");
         // show the mouse
         UnityEngine.Cursor.lockState = CursorLockMode.None;
@@ -55,7 +56,7 @@ public class GameWinUI : MonoBehaviour
     void Quit()
     {
         // force stop unity editor
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
     }
