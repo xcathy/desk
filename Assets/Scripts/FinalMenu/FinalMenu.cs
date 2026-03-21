@@ -9,7 +9,6 @@ public class GameWin : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        Debug.Log("game win trigger entered");
         GameWinUI.Instance.GameWin();
         MenuUI.Instance.SetEnable(false);
         InventoryUI.Instance.SetEnable(false);
