@@ -78,6 +78,7 @@ public class MenuUI : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
+        Application.ExternalEval("OnUnityQuit()");
     }
     public void SetEnable(bool status)
     {

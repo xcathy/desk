@@ -58,5 +58,6 @@ public class GameWinUI : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
         // force stop the game
         Application.Quit();
+        Application.ExternalEval("OnUnityQuit()");
     }
 }
